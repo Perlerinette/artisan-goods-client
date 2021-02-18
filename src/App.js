@@ -3,40 +3,41 @@ import React, { useState, useEffect } from 'react';
 import SiteBar from './home/Navbar';
 import Routes from './home/Routes';
 import Footer from './home/Footer';
-import ProductIndex from './products/ProductIndex';
 import {BrowserRouter as Router} from 'react-router-dom';
+import HomeGalleryParent from './products/HomeGalleryParent';
 
 function App() {
-
-  const [sessionToken, setSessionToken] = useState('');
+  const [sessionToken, setSessionToken] = useState("");
 
   useEffect(() => {
-    if(localStorage.getItem('token')){
-      setSessionToken(localStorage.getItem('token'));
+    if (localStorage.getItem("token")) {
+      setSessionToken(localStorage.getItem("token"));
     }
   }, []);
 
   const updateToken = (newToken) => {
-    localStorage.setItem('token', newToken);
+    localStorage.setItem("token", newToken);
     setSessionToken(newToken);
-    console.log(newToken);
-  }
+    console.log(sessionToken);
+  };
 
   const clearToken = () => {
     localStorage.clear();
-    setSessionToken('');
-  }
+    setSessionToken("");
+  };
 
   return (
+
     <div >
       <Router>
         <SiteBar clickLogout={clearToken}/>
         <Routes />
       </Router>
-      {/* Nate's module */}
-      {/* <ProductIndex /> */}
-      
+      <HomeGalleryParent/>
       <Footer />   
+
+//       <Auth updateToken={updateToken} />
+
     </div>
   );
 }

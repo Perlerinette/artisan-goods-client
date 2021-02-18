@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import ProductIndex from '../products/ProductIndex';
+import React from 'react';
+import {Container, Row, Col} from 'reactstrap';
+import Signup from './Signup';
+import Login from './Login';
 
-const Auth = () => {
-    return ( 
-        <>
-            <h3>Sign up or login in your account</h3>
-            <Link className='text-decoration-none pl-5' to='/myShop' ></Link>
-
-        </>
-     );
+const Auth = (props) => {
+    return(
+        <Container className = "auth-container">
+            <Row>
+                <Col md="6">
+                    <Signup updateToken={props.updateToken}/>
+                </Col>
+                <Col md="6" className="login-Col">
+                <Login updateToken={props.updateToken}/>
+                </Col>
+            </Row>
+        </Container>
+    )
 }
- 
+
 export default Auth;
