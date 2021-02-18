@@ -1,6 +1,9 @@
 import './App.css';
 import SiteBar from './home/Navbar';
 import React, { useState, useEffect } from 'react';
+import HomeGalleryChild from './products/HomeGalleryChild';
+import HomeGalleryParent from './products/HomeGalleryParent';
+
 
 function App() {
 
@@ -26,6 +29,8 @@ function App() {
   return (
     <div >
         <SiteBar clickLogout={clearToken}/>
+        
+        <HomeGalleryParent/>
     </div>
   );
 }
