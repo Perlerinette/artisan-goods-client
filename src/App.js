@@ -1,10 +1,10 @@
 import './App.css';
-import SiteBar from './home/Navbar';
 import React, { useState, useEffect } from 'react';
-import HomeGalleryChild from './products/HomeGalleryChild';
+import SiteBar from './home/Navbar';
+import Routes from './home/Routes';
+import Footer from './home/Footer';
+import {BrowserRouter as Router} from 'react-router-dom';
 import HomeGalleryParent from './products/HomeGalleryParent';
-import Auth from "./auth/Auth";
-
 
 function App() {
   const [sessionToken, setSessionToken] = useState("");
@@ -29,11 +29,14 @@ function App() {
   return (
 
     <div >
+      <Router>
         <SiteBar clickLogout={clearToken}/>
-        
-        <HomeGalleryParent/>
-     
-      <Auth updateToken={updateToken} />
+        <Routes />
+      </Router>
+      <HomeGalleryParent/>
+      <Footer />   
+
+//       <Auth updateToken={updateToken} />
 
     </div>
   );
