@@ -1,6 +1,10 @@
 import './App.css';
-import SiteBar from './home/Navbar';
 import React, { useState, useEffect } from 'react';
+import SiteBar from './home/Navbar';
+import Routes from './home/Routes';
+import Footer from './home/Footer';
+import ProductIndex from './products/ProductIndex';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
 
@@ -25,7 +29,14 @@ function App() {
 
   return (
     <div >
+      <Router>
         <SiteBar clickLogout={clearToken}/>
+        <Routes />
+      </Router>
+      {/* Nate's module */}
+      {/* <ProductIndex /> */}
+      
+      <Footer />   
     </div>
   );
 }
