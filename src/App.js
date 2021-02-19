@@ -1,10 +1,10 @@
-import './App.css';
-import React, { useState, useEffect } from 'react';
-import SiteBar from './home/Navbar';
-import Routes from './home/Routes';
-import Footer from './home/Footer';
-import {BrowserRouter as Router} from 'react-router-dom';
-import HomeGalleryParent from './products/HomeGalleryParent';
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import SiteBar from "./home/Navbar";
+import Routes from "./home/Routes";
+import Footer from "./home/Footer";
+import { BrowserRouter as Router } from "react-router-dom";
+// import HomeGalleryParent from "./products/HomeGalleryParent";
 
 function App() {
   const [sessionToken, setSessionToken] = useState("");
@@ -27,17 +27,14 @@ function App() {
   };
 
   return (
-
-    <div >
+    <div>
       <Router>
-        <SiteBar clickLogout={clearToken}/>
+        <SiteBar clickLogout={clearToken} />
+
         <Routes />
       </Router>
-      <HomeGalleryParent/>
-      <Footer />   
-
-//       <Auth updateToken={updateToken} />
-
+      {/* <HomeGalleryParent /> */}
+      <Footer />
     </div>
   );
 }

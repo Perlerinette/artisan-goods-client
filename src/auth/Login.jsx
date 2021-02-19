@@ -19,21 +19,28 @@ const Login = (props) => {
           })
             .then((response) => response.json())
             .then((data) => {
-              props.updateToken(data.sessionToken);
-            });console.log(email, password);
+              props.updateToken(data.sessionToken)
+              console.log(email, password);
+            })
+            .catch(err=> console.log(err));;
+  
+          
           }
 
+
+      
+        
     return(
         <div>
             <h1>Login</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor="email">Email</Label>
-                    <Input onChange={(e)=>setEmail(e.target.value)} name="email" value={email} />
+                    <Input onChange={(e)=>setEmail(e.target.value)} type="email" name="email" placeholder="Email" value={email} required /> 
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="password">Password</Label>
-                    <Input onChange={(e)=>setPassword(e.target.value)} name="password" value={password} />
+                    <Input onChange={(e)=>setPassword(e.target.value)} type="password" minLength={'5'} name="password" placeholder="Password" value={password} required/>
                 </FormGroup>
                 <Button type="submit">Login</Button>
 

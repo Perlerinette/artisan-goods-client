@@ -36,3 +36,91 @@
     transform: rotate(360deg);
   }
 }
+
+.pageBody {
+  background-color: #f7e1d7;
+  height: 1500px;
+}
+
+.topDiv {
+  background-color: black;
+  height: 20px;
+}
+
+.navbar {
+  height: 120px;
+  background-color: #dedbd2;
+}
+
+.NavbarBrand {
+  font-family: cursive;
+
+  position: relative;
+  left: 300px;
+}
+.Carousel {
+  height: 350px;
+  width: auto;
+  padding: px;
+}
+
+.carousel-inner {
+  height: 350px;
+  width: auto;
+}
+
+.carousel-item {
+  height: 350px;
+}
+
+.colorDiv {
+  /* background-color: #edafb8; */
+
+  height: 15px;
+  width: auto;
+  position: relative;
+  top: 0px;
+}
+
+.CardColumns {
+  position: relative;
+  top: 70px;
+}
+
+.tabs {
+  font-size: larger;
+  color: #ffddd2;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.Card {
+  padding: 5px;
+  justify-content: center;
+  text-align: center;
+  /* color: 74, 87, 89; */
+  height: 300px;
+  width: 200px;
+  margin: 20px;
+}
+
+.CardColumns {
+  color: #4a5759;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #b0c4b1;
+}
+/* .card-body {
+  background-color: white;
+  border: solid 2px #e94610;
+  border-radius: 15px;
+  height: 350px;
+  width: 300px;
+} */
+
+/* .card {
+  height: 350px;
+  width: 300px;
+} */

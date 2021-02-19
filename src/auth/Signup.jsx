@@ -25,16 +25,16 @@ const Signup = (props) => {
     }
 
     return(
-        <div>
+        <div className="pageBody">
             <h1>Sign Up</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor="email">Email</Label>
-                    <Input onChange={(e)=>setEmail(e.target.value)} name="email" value={email} />
+                    <Input onChange={(e)=>setEmail(e.target.value)} type="email" name="email" placeholder="Email" value={email} required /> 
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="password">Password</Label>
-                    <Input onChange={(e)=>setPassword(e.target.value)} name="password" value={password} />
+                    <Input onChange={(e)=>setPassword(e.target.value)} type="password" id="password" minLength={'5'} name="password" placeholder="Password" value={password} required/>
                 </FormGroup>
                 <Button type="submit">Signup</Button>
             </Form>
