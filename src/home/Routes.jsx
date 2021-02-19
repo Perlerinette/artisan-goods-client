@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Auth from '../auth/Auth';
 import ProductIndex from '../products/ProductIndex';
 import HomeGalleryParent from '../products/HomeGalleryParent';
+import Logout from '../auth/Logout';
 
 const Routes = (props) => {
 
@@ -21,16 +22,14 @@ const Routes = (props) => {
         console.log(sessionToken);
     };
 
-    const clearToken = () => {
-        localStorage.clear();
-        setSessionToken("");
-    };
+    
 
     const protectedViews = () => {
         return (
           sessionToken === localStorage.getItem('token') ? <ProductIndex token={sessionToken} /> : <Auth updateToken={updateToken} />
         )
     }
+
 
 
     return ( 
@@ -42,8 +41,7 @@ const Routes = (props) => {
                 {protectedViews()}
             </Route>
             <Route exact path="/logOut">
-                {clearToken}
-                <Auth />
+                <Logout setSessionToken={setSessionToken} />                
             </Route>
         </Switch>
      )
