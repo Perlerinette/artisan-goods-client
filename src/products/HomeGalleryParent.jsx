@@ -32,7 +32,6 @@ const HomeGalleryParent = (props) => {
 
     return (
         <div>
-        
         <CardColumns>
             {displayCards()}
         </CardColumns>
