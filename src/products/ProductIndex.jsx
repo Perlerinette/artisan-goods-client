@@ -3,7 +3,7 @@ import {Container, Row, Col} from 'reactstrap';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import ProductCreate from './ProductCreate';
 
-const ProductIndex = () => {
+const ProductIndex = (props) => {
 
     const [productList, setProductList] = useState([]);
 
