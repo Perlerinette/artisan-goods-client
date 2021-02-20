@@ -39,12 +39,15 @@
 
 .pageBody {
   /* background-color: #f7e1d7; */
-  height: 2000px;
+  height: 2600px;
 }
 
 .topDiv {
   background-color: black;
-  height: 20px;
+  color: white;
+  font-size: xx-small;
+  text-align: center;
+  height: 25px;
 }
 
 .navbar {
@@ -95,16 +98,16 @@
 
 /* .bodyDiv {
   height: 900px;
-  width: 1100px;
+  width: 1300px;
   justify-content: center;
   text-align: center;
   position: relative;
-  left: 130px;
-  top: 40px;
+  left: 40px;
+  top: 100px;
   padding: 20px;
 
-  background-color: #dedbd2;
-} */
+  background-color: #dedbd2; */
+
 .h1OpenShop {
   color: white;
   text-align: center;
@@ -127,20 +130,115 @@
 }
 .CardColumns {
   position: relative;
-  top: 100px;
+  top: 800px;
+  left: 80px;
 }
+
+.Cards {
+  text-align: center;
+  justify-content: center;
+}
+
 .Card {
   text-align: center;
   height: 350px;
   width: 100px;
-  background: blue;
+  border: 2px solid rgb(167, 16, 167);
+  background-color: seagreen;
   padding: 20px;
 }
 
 .CardBody {
-  height: 2;
+  border: 2px solid #4a5759;
 }
 
 .footer {
   background-color: #b0c4b1;
+}
+
+.socialmedia {
+  text-align: center;
+  display: inline-block;
+  padding: 0px;
+
+  color: black;
+}
+
+.pinkDiv {
+  height: 510px;
+  width: 700px;
+  position: relative;
+  left: 25px;
+  top: 40px;
+
+  background-color: #f7e1d7;
+}
+
+.pinkH1 {
+  color: black;
+  text-align: center;
+  position: relative;
+  left: 50px;
+  padding: 30px;
+  /* text-shadow: black 1px 1px; */
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.portrait {
+  position: relative;
+  bottom: 100px;
+  left: 30px;
+}
+
+.p {
+  width: 400px;
+  position: relative;
+  left: 270px;
+  bottom: 320px;
+}
+
+.bowl {
+  position: relative;
+  bottom: 220px;
+  left: 20px;
+}
+
+.vases {
+  position: relative;
+  bottom: 270px;
+  left: 50px;
+}
+.img1 {
+  position: relative;
+  left: 880px;
+  bottom: 430px;
+  border: solid 2px black;
+}
+
+.img2 {
+  position: relative;
+  left: 580px;
+  bottom: 170px;
+  border: solid 2px black;
+}
+
+.img3 {
+  position: relative;
+  left: 592px;
+  bottom: 430px;
+  border: solid 2px black;
+}
+
+.img4 {
+  position: relative;
+  left: 292px;
+  bottom: 170px;
+  border: solid 2px black;
+}
+
+.imgGrid {
+  position: relative;
+  right: 140px;
+  bottom: 40px;
 }

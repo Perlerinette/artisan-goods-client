@@ -24,7 +24,8 @@ const items = [
         altText: 'Slide 1',
         caption: 'Slide 3',
         header: 'Slide 3 Header',
-        key: '3'
+        key: '3',
+        className: 'slide1'
       },
       {
         src: 'https://images.unsplash.com/photo-1532592068623-db1978e40df5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FuZGxlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60',
@@ -83,11 +84,34 @@ const items = [
         <div className="colorDiv">
             <h1 className="h1OpenShop">Open your own handmade shop!</h1>
             <button className="openShop">My Shop</button>
+
+            <div className="pinkDiv">
+                <h1 class="pinkH1">Featured Artist:</h1>
+                <img className="portrait" style={{ borderRadius: "50px", width: '200px', height: "300px"}} src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjV8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"></img>
+                <p className="p">   Hannah Wilson is a ceramic artist living and working in the Finger Lakes Region in Upstate New York. she has crafted a line of fine, functional, handmade pottery from my rural studio outside of Ithaca, NY and sells at regional art fairs in the North East as well as at several galleries in the Finger Lakes
+                Hannah says making pottery is a constant source of joy and amusement.
+                </p>
+                
+               <img className="vases" style={{ borderRadius: "50px", width: '300px', height: "200px"}} src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"></img>
+               <img className="bowl" style={{ borderRadius: "50px", width: '200px', height: "180px"}} src="https://images.unsplash.com/photo-1552740844-4f8a8206c68d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2389&q=80"></img>
+
+                
+
+            </div>
+            <div className="imgGrid">
+                <img className="img1" style={{ width: '300px', height: "250px"}} src="https://images.unsplash.com/photo-1450297166380-cabe503887e5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8amV3ZWxyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"></img>
+
+                <img className="img2" style={{ width: '300px', height: "250px"}} src="https://images.unsplash.com/photo-1608492024938-bbdd385d5175?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDV8fHRhYmxlJTIwc2V0dGluZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"></img>
+
+                <img className="img3" style={{ width: '300px', height: "250px"}} src="https://images.unsplash.com/photo-1602409339188-95d178a611a0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3900&q=80"></img>
+
+                <img className="img4" style={{ width: '300px', height: "250px"}} src="https://images.unsplash.com/photo-1601612628452-9e99ced43524?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bWVucyUyMHByb2R1Y3RzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"></img>
+            </div>
            
         </div>
-       {/* <div className="bodyDiv">
-           <h1>products</h1>
-       </div> */}
+       <div className="bodyDiv">
+           
+       </div>
         <CardColumns className="CardColumns">
             {displayCards()}
         </CardColumns>
