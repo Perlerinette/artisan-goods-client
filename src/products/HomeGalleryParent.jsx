@@ -21,7 +21,14 @@ const HomeGalleryParent = (props) => {
 const items = [
     {
         src: 'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhbmtldHMlMjBrbml0fGVufDB8fDB8&auto=format&fit=crop&w=1000&q=60',
-        altText: 'Slide 3',
+        altText: 'Slide 1',
+        caption: 'Slide 3',
+        header: 'Slide 3 Header',
+        key: '3'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1532592068623-db1978e40df5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FuZGxlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60',
+        altText: 'Slide 1',
         caption: 'Slide 3',
         header: 'Slide 3 Header',
         key: '3'
@@ -42,6 +49,14 @@ const items = [
     header: 'Slide 2 Header',
     key: '2'
   },
+  {
+    src: 'https://images.unsplash.com/photo-1578426720323-6d3b67133446?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1605&q=80',
+    altText: 'Slide 2',
+    caption: 'Slide 2',
+    header: 'Slide 2 Header',
+    key: '2'
+  },
+
 
 ];
 
@@ -66,8 +81,13 @@ const items = [
          <UncontrolledCarousel className="Carousel" items={items} />
 
         <div className="colorDiv">
+            <h1 className="h1OpenShop">Open your own handmade shop!</h1>
+            <button className="openShop">My Shop</button>
            
         </div>
+       {/* <div className="bodyDiv">
+           <h1>products</h1>
+       </div> */}
         <CardColumns className="CardColumns">
             {displayCards()}
         </CardColumns>

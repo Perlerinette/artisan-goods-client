@@ -10,7 +10,8 @@ const Routes = () => {
         <Switch>
             <Route exact path="/home"><HomeGalleryParent /></Route>
             <Route exact path="/myAccount"><Auth /></Route>
-            <Route exact path="/logOut"><Auth /></Route>
+            <Route exact path="/logOut">
+                <Logout setSessionToken={setSessionToken} updateToken={updateToken}/></Route>
             <Route exact path="/myShop"><ProductIndex /></Route>
         </Switch>
      )

@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,11 +35,11 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 .pageBody {
-  background-color: #f7e1d7;
-  height: 1500px;
+  /* background-color: #f7e1d7; */
+  height: 2000px;
 }
 
 .topDiv {
@@ -49,15 +49,25 @@
 
 .navbar {
   height: 120px;
-  background-color: #dedbd2;
+  /* background-color: #dedbd2; */
 }
-
 .NavbarBrand {
-  font-family: cursive;
-
   position: relative;
-  left: 300px;
+  left: 115px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+.logo {
+  position: relative;
+  right: 896px;
+}
+
+.tabs {
+  font-size: large;
+  color: #ffddd2;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 .Carousel {
   height: 350px;
   width: auto;
@@ -74,53 +84,63 @@
 }
 
 .colorDiv {
-  /* background-color: #edafb8; */
+  background-color: #b0c4b1;
 
-  height: 15px;
-  width: auto;
+  height: 150px;
+
+  width: autopx;
   position: relative;
-  top: 0px;
+  top: 20px;
 }
 
-.CardColumns {
-  position: relative;
-  top: 70px;
-}
-
-.tabs {
-  font-size: larger;
-  color: #ffddd2;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.Card {
-  padding: 5px;
+/* .bodyDiv {
+  height: 900px;
+  width: 1100px;
   justify-content: center;
   text-align: center;
-  /* color: 74, 87, 89; */
-  height: 300px;
-  width: 200px;
-  margin: 20px;
+  position: relative;
+  left: 130px;
+  top: 40px;
+  padding: 20px;
+
+  background-color: #dedbd2;
+} */
+.h1OpenShop {
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
+.openShop {
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  position: relative;
+  left: 570px;
+  bottom: 30px;
+  background-color: #4a5759;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: large;
+  letter-spacing: 1px;
+}
 .CardColumns {
-  color: #4a5759;
+  position: relative;
+  top: 100px;
+}
+.Card {
+  text-align: center;
+  height: 350px;
+  width: 100px;
+  background: blue;
   padding: 20px;
+}
+
+.CardBody {
+  height: 2;
 }
 
 .footer {
   background-color: #b0c4b1;
 }
-/* .card-body {
-  background-color: white;
-  border: solid 2px #e94610;
-  border-radius: 15px;
-  height: 350px;
-  width: 300px;
-} */
-
-/* .card {
-  height: 350px;
-  width: 300px;
-} */

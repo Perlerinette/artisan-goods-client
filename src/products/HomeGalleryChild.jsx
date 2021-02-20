@@ -4,17 +4,22 @@ import { Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody} fro
 
 const HomeGalleryChild = (props) => {
     return ( 
+
+
       <div>
-        <Card className="Card">
+      <Card className="Card">
+        <CardImg  src={props.productItem.photoURL} width="50" height="200"  alt="Card image" />
         <CardBody className="CardBody">
-          <CardImg src={props.productItem.photoURL} alt="card image" /> 
           <CardTitle tag="h5">{props.productItem.name}</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
+          <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
           <CardText>{props.productItem.description}</CardText>
-          <Button>Button</Button>
+          <Button style={{background: "#4A5759"}}>Button</Button>
         </CardBody>
       </Card>
-      </div>
+    </div>
+
+
+  
      );
 }
  
