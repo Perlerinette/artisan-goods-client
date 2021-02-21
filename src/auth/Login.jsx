@@ -37,7 +37,7 @@ const Login = (props) => {
         <div>
             <h1>Login</h1>
             <Form onSubmit={handleSubmit}>
-                <FormGroup>
+            <FormGroup>
                     <Label htmlFor="email">Email</Label>
                     <Input onChange={(e)=>setEmail(e.target.value)} type="email" name="email" placeholder="Email" value={email} required />
                 </FormGroup>
