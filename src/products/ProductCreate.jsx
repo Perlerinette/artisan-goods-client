@@ -1,17 +1,56 @@
 import React, { useState } from 'react';
 import {Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+import HomeGalleryChild from './HomeGalleryChild';
 
 const ProductCreate = (props) => {
 
     const [name, setName] = useState('');
-    const [price, setPrice] = useState('');
+    const [price, setPrice] = useState(0);
     const [description, setDescription] = useState('');
-    const [picURL, setPicURL] = useState('');
-    const [inStock,setInStock] = useState('');
-    const [publish, setPublish] = useState('');
+    const [photoURL, setPhotoURL] = useState('');
+    const [inStock,setInStock] = useState(true);
+    const [publish, setPublish] = useState(true);
 
     const handleSubmit = (e) => {
 
+        console.log('inStock', inStock);
+        e.preventDefault();
+        fetch("http://localhost:3000/product/create" , {
+            method: 'POST',
+            body: JSON.stringify({
+                product:{
+                    name: name, 
+                    price: price, 
+                    description: description,
+                    availability: inStock,
+                    photoURL: photoURL,
+                    adminDisplay: publish
+                }
+            }),
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': props.token
+            })
+        })
+        .then( (res) => res.json())
+        .then( (logData) => {
+            console.log('logData -->', logData);
+            setName('');
+            setPrice(0);
+            setDescription('');
+            setInStock(true);
+            setPhotoURL('');
+            setPublish(true);
+            props.getListOfProducts();
+
+        })
+        .catch((err => { console.log(err);}))
+
+    }
+
+    const onValueChange = (e) => {
+        e.target.value === 'inStock' ? setInStock(true) : setInStock(false);
+        console.log('e.target.value', e.target.value);
     }
 
 
@@ -34,31 +73,31 @@ const ProductCreate = (props) => {
                 <FormGroup >
                     <legend>Availability</legend>
                     <FormGroup check>
-                    <Label htmlFor='inStock' check>
-                        <Input type="radio" name="radio1" value={inStock} onChange={(e) => setInStock(e.target.value)}/>{' '}
+                    <Label htmlFor='availability' check>
+                        <Input type="radio" name="availability" value='inStock' defaultchecked onChange={(e) => onValueChange(e)}/>{' '}
                         In Stock
                     </Label>
                     </FormGroup>
                     <FormGroup check>
                     <Label check>
-                        <Input type="radio" name="radio1" />{' '}
+                        <Input type="radio" name="availability" value='OutOfStock'  onChange={(e) => onValueChange(e)}/>{' '}
                         Out of Stock
                     </Label>
                     </FormGroup>
                 </FormGroup>
-                <FormGroup>
-                    <Label htmlFor="picURL">Upload image</Label>
-                    <Input type="file" accept='image/*' name="file" value={picURL} onChange={(e) => setPicURL(e.target.value)}  />
+                {/* <FormGroup>
+                    <Label htmlFor="photoURL">Upload image</Label>
+                    <Input type="file" accept='image/*' name="file" value={photoURL} onChange={(e) => setPhotoURL(e.target.value)}  />
                     <FormText color="muted">
                     Upload any image file.
                     </FormText>
-                </FormGroup>
-                <FormGroup check>
+                </FormGroup> */}
+                {/* <FormGroup check>
                     <Label htmlFor='publish' check>
-                    <Input type="checkbox" onChange={(e) => setPublish(e.target.value)} />{' '}
+                    <Input type="checkbox" value={publish} onChange={(e) => setPublish(e.target.value)} />{' '}
                     Publish?
                     </Label>
-                </FormGroup>
+                </FormGroup> */}
                 <br />
                 <Button type="submit">List it!</Button>
             </Form>

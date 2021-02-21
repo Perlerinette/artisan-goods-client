@@ -7,7 +7,7 @@ import Logout from '../auth/Logout';
 
 const Routes = (props) => {
 
-
+    const [userEmail, setUserEmail] = useState('');
     const [sessionToken, setSessionToken] = useState("");
 
     useEffect(() => {
@@ -26,7 +26,7 @@ const Routes = (props) => {
 
     const protectedViews = () => {
         return (
-          sessionToken === localStorage.getItem('token') ? <ProductIndex token={sessionToken} /> : <Auth updateToken={updateToken} />
+          sessionToken === localStorage.getItem('token') ? <ProductIndex token={sessionToken} email={userEmail} /> : <Auth updateToken={updateToken} setUserEmail={setUserEmail}/>
         )
     }
 
@@ -41,7 +41,8 @@ const Routes = (props) => {
                 {protectedViews()}
             </Route>
             <Route exact path="/logOut">
-                <Logout setSessionToken={setSessionToken} />                
+                <Logout setSessionToken={setSessionToken} updateToken={updateToken} setUserEmail={setUserEmail}/>
+                     
             </Route>
         </Switch>
      )
