@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import {useHistory} from 'react-router-dom';
 
 const Signup = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const history = useHistory();
 
     let handleSubmit = (event) => {
         event.preventDefault();
+        console.log(email, password);
+        props.setUserEmail(email);
+
         fetch("http://localhost:3000/user/signup/", {
             method: "POST",
             body: JSON.stringify({
@@ -19,7 +24,7 @@ const Signup = (props) => {
             .then((response) => response.json())
             .then((data) => {
               props.updateToken(data.sessionToken);
-              console.log(email, password);
+              history.push('/MyShop');
             })
             .catch(err=> console.log(err));
     }
