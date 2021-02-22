@@ -35,7 +35,7 @@ const items = [
         key: '3'
       },
   {
-    src: "https://images.unsplash.com/photo-1610701596295-4dc5d6289214?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1651&q=80",
+    src: "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
     altText: 'Slide 1',
     caption: 'Slide 1',
     header: 'Slide 1 Header',
@@ -57,7 +57,13 @@ const items = [
     header: 'Slide 2 Header',
     key: '2'
   },
-
+  {
+    src: 'https://images.unsplash.com/photo-1517722014278-c256a91a6fba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+    altText: 'Slide 2',
+    caption: 'Slide 2',
+    header: 'Slide 2 Header',
+    key: '2'
+  },
 
 ];
 
@@ -84,7 +90,7 @@ const items = [
         <div className="colorDiv">
             <h1 className="h1OpenShop">Open your own handmade shop!</h1>
             <button className="openShop">My Shop</button>
-
+        <div className="groupDiv">
             <div className="pinkDiv">
                 <h1 class="pinkH1">Featured Artist:</h1>
                 <img className="portrait" style={{ borderRadius: "50px", width: '200px', height: "300px"}} src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjV8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"></img>
@@ -92,14 +98,14 @@ const items = [
                 Hannah says making pottery is a constant source of joy and amusement.
                 </p>
                 
-               <img className="vases" style={{ borderRadius: "50px", width: '300px', height: "200px"}} src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"></img>
+               <img className="vases" style={{ borderRadius: "50px", width: '320px', height: "220px"}} src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"></img>
                <img className="bowl" style={{ borderRadius: "50px", width: '200px', height: "180px"}} src="https://images.unsplash.com/photo-1552740844-4f8a8206c68d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2389&q=80"></img>
 
                 
 
             </div>
             <div className="imgGrid">
-                <img className="img1" style={{ width: '300px', height: "250px"}} src="https://images.unsplash.com/photo-1450297166380-cabe503887e5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8amV3ZWxyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"></img>
+                <img className="img1" style={{ width: '300px', height: "250px"}} src="https://images.unsplash.com/photo-1450297166380-cabe503887e5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8amV3ZWxyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=6"></img>
 
                 <img className="img2" style={{ width: '300px', height: "250px"}} src="https://images.unsplash.com/photo-1608492024938-bbdd385d5175?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDV8fHRhYmxlJTIwc2V0dGluZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"></img>
 
@@ -107,7 +113,15 @@ const items = [
 
                 <img className="img4" style={{ width: '300px', height: "250px"}} src="https://images.unsplash.com/photo-1601612628452-9e99ced43524?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bWVucyUyMHByb2R1Y3RzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"></img>
             </div>
-           
+            </div>
+               {/* shape divider app */}
+           <div class="custom-shape-divider-bottom-1613956483">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+
+           </div>
+           <div className="greenDiv"></div>
         </div>
        <div className="bodyDiv">
            

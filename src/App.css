@@ -51,49 +51,49 @@
 }
 
 .navbar {
-  height: 120px;
+  height: 100px;
   /* background-color: #dedbd2; */
 }
 .NavbarBrand {
   position: relative;
-  left: 115px;
+  left: 128px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .logo {
   position: relative;
-  right: 896px;
+  right: 906px;
 }
 
 .tabs {
-  font-size: large;
+  font-size: medium;
   color: #ffddd2;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .Carousel {
-  height: 350px;
+  height: 440px;
   width: auto;
   padding: px;
 }
 
 .carousel-inner {
-  height: 350px;
+  height: 440px;
   width: auto;
 }
 
 .carousel-item {
-  height: 350px;
+  height: 440px;
 }
 
 .colorDiv {
   background-color: #b0c4b1;
 
-  height: 150px;
+  height: 188px;
 
   width: autopx;
   position: relative;
-  top: 20px;
+  top: 18px;
 }
 
 /* .bodyDiv {
@@ -113,6 +113,8 @@
   text-align: center;
   padding: 30px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: relative;
+  bottom: 20px;
 }
 
 .openShop {
@@ -121,7 +123,7 @@
   border-radius: 15px;
   position: relative;
   left: 570px;
-  bottom: 30px;
+  bottom: 0px;
   background-color: #4a5759;
   color: white;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -130,8 +132,8 @@
 }
 .CardColumns {
   position: relative;
-  top: 800px;
-  left: 80px;
+  top: 900px;
+  left: 0px;
 }
 
 .Cards {
@@ -150,10 +152,6 @@
 
 .CardBody {
   border: 2px solid #4a5759;
-}
-
-.footer {
-  background-color: #b0c4b1;
 }
 
 .socialmedia {
@@ -195,50 +193,98 @@
   width: 400px;
   position: relative;
   left: 270px;
-  bottom: 320px;
+  bottom: 310px;
 }
 
 .bowl {
   position: relative;
   bottom: 220px;
-  left: 20px;
+  left: 150px;
 }
 
 .vases {
   position: relative;
-  bottom: 270px;
-  left: 50px;
+  bottom: 290px;
+  left: 220px;
 }
 .img1 {
   position: relative;
   left: 880px;
   bottom: 430px;
-  border: solid 2px black;
+  /* border: solid 2px black;
+} */
 }
-
 .img2 {
   position: relative;
   left: 580px;
   bottom: 170px;
-  border: solid 2px black;
+  /* border: solid 2px black; */
 }
 
 .img3 {
   position: relative;
   left: 592px;
   bottom: 430px;
-  border: solid 2px black;
+  /* border: solid 2px black; */
 }
 
 .img4 {
   position: relative;
   left: 292px;
   bottom: 170px;
-  border: solid 2px black;
+  /* border: solid 2px black;
+} */
 }
 
 .imgGrid {
   position: relative;
   right: 140px;
   bottom: 40px;
+}
+
+.treeImg {
+  position: relative;
+  left: 30px;
+  bottom: 25px;
+  border-radius: 50%;
+}
+
+.footer {
+  background-color: #b0c4b1;
+  position: relative;
+  bottom: -1000px;
+}
+
+.custom-shape-divider-bottom-1613956483 {
+  position: relative;
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1613956483 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 121px;
+}
+
+.custom-shape-divider-bottom-1613956483 .shape-fill {
+  fill: #4a5759;
+}
+
+.greenDiv {
+  height: 1900px;
+  width: auto;
+  background-color: #4a5759;
+  position: relative;
+  top: -102px;
+}
+
+.groupDiv {
+  position: relative;
+  top: 60px;
 }
