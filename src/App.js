@@ -36,7 +36,6 @@ function App() {
       <HomeGalleryParent/>
       <Footer />   
 
-//       <Auth updateToken={updateToken} />
 
     </div>
   );

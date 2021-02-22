@@ -1,19 +1,30 @@
+
 import { useEffect, useState } from "react";
 import React from 'react';
-import { Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody} from 'reactstrap';
+import { Card, Modal, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody} from 'reactstrap';
+import ImageUploader from './ImageUploader';
+
+
+
 
 const HomeGalleryChild = (props) => {
+
     return ( 
-        <Card>
-        <CardBody>
+      <>
+        <Card classname="cards">
+        <CardBody className='gallery-cards'>
           <CardImg src={props.productItem.photoURL} alt="card image" /> 
-          <CardTitle tag="h5">{props.productItem.name}</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
-          <CardText>{props.productItem.description}</CardText>
-          <Button>Button</Button>
+          <CardTitle className='main-color' tag="h5">{props.productItem.name}</CardTitle>
+          <CardSubtitle className='main-color' tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
+          <CardText className='main-color'>{props.productItem.description}</CardText>
+          <Button >
+              <ImageUploader/>
+            </Button>
         </CardBody>
-      </Card>
-     );
-}
+        </Card>
+       </>
+         
+    )}
+
  
 export default HomeGalleryChild;

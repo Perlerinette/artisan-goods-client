@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import HomeGalleryChild from './HomeGalleryChild';
-import {CardColumns} from 'reactstrap';
+import {CardColumns, Container, Jumbotron} from 'reactstrap';
 
 
 const HomeGalleryParent = (props) => {
@@ -32,6 +32,12 @@ const HomeGalleryParent = (props) => {
 
     return (
         <div>
+        <Jumbotron fluid>
+        <Container fluid>
+          <h1 className="display-3">Welcome.</h1>
+          <p className="lead">what should we put here???</p>
+        </Container>
+      </Jumbotron>
         
         <CardColumns>
             {displayCards()}
