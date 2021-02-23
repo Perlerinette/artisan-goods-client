@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import {useHistory} from 'react-router-dom';
 
 const Signup = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const history = useHistory();
 
     let handleSubmit = (event) => {
         event.preventDefault();
+        console.log(email, password);
+        props.setUserEmail(email);
+
         fetch("http://localhost:3000/user/signup/", {
             method: "POST",
             body: JSON.stringify({
@@ -19,22 +24,22 @@ const Signup = (props) => {
             .then((response) => response.json())
             .then((data) => {
               props.updateToken(data.sessionToken);
-              console.log(email, password);
+              history.push('/MyShop');
             })
             .catch(err=> console.log(err));
     }
 
     return(
-        <div>
+        <div className="pageBody">
             <h1>Sign Up</h1>
             <Form onSubmit={handleSubmit}>
             <FormGroup>
                     <Label htmlFor="email">Email</Label>
-                    <Input onChange={(e)=>setEmail(e.target.value)} type="email" name="email" placeholder="Email" value={email} required /> 
+                    <Input onChange={(e)=>setEmail(e.target.value)} type="email" name="email" placeholder="Email" value={email} required  />
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="password">Password</Label>
-                    <Input onChange={(e)=>setPassword(e.target.value)} type="password" minLength={'5'} name="password" placeholder="Password" value={password} required/>
+                    <Input onChange={(e)=>setPassword(e.target.value)} type="password" minLength={'4'} name="password" placeholder="Password" value={password} required />
                 </FormGroup>
                 <Button type="submit">Signup</Button>
             </Form>
