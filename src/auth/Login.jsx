@@ -25,14 +25,18 @@ const Login = (props) => {
           })
             .then((response) => response.json())
             .then((data) => {
+
               console.log(data);
               console.log(data.sessionToken);
               props.updateToken(data.sessionToken);
               history.push('/MyShop');
             });
-            
+
           }
 
+
+      
+        
     return(
         <div>
             <h1>Login</h1>

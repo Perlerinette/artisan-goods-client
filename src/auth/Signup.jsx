@@ -30,7 +30,7 @@ const Signup = (props) => {
     }
 
     return(
-        <div>
+        <div className="pageBody">
             <h1>Sign Up</h1>
             <Form onSubmit={handleSubmit}>
             <FormGroup>
