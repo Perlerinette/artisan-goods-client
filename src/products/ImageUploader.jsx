@@ -4,7 +4,7 @@ const CLOUD_URL = 'https://api.cloudinary.com/v1_1/natescloudinary/image/upload'
 
 const ImgageUpload = (props) => {
 
-    const [avUrl, setAvUrl] = useState('#')
+    const [imageUrl, setImageUrl] = useState('#')
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -51,7 +51,7 @@ const ImgageUpload = (props) => {
                 <input id="file-input" type="file" />
                 <button>Upload Product Image!</button>
             </form>
-            <img src={avUrl} alt="avatar" />
+            <img src={imageUrl} alt="product image" />
         </>
     )
 }
