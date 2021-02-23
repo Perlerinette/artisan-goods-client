@@ -94,8 +94,8 @@ const items = [
             <div className="pinkDiv">
                 <h1 class="pinkH1">Featured Artist:</h1>
                 <img className="portrait" style={{ borderRadius: "50px", width: '200px', height: "300px"}} src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjV8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"></img>
-                <p className="p">   Hannah Wilson is a ceramic artist living and working in the Finger Lakes Region in Upstate New York. she has crafted a line of fine, functional, handmade pottery from my rural studio outside of Ithaca, NY and sells at regional art fairs in the North East as well as at several galleries in the Finger Lakes
-                Hannah says making pottery is a constant source of joy and amusement.
+                <p className="p">   Hannah Wilson is a ceramic artist living and working in the Finger Lakes Region in Upstate New York. She has crafted a line of fine, functional, handmade pottery from her rural studio outside of Ithaca, NY and sells at regional art fairs in the North East as well as at several galleries in the Finger Lakes.
+                Hannah says making pottery is a constant source of joy and amusement.    
                 </p>
                 
                <img className="vases" style={{ borderRadius: "50px", width: '320px', height: "220px"}} src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"></img>
