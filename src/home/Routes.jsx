@@ -41,12 +41,9 @@ const Routes = (props) => {
                 {protectedViews()}
             </Route>
             <Route exact path="/logOut">
-<<<<<<< HEAD
-                <Logout setSessionToken={setSessionToken} updateToken={updateToken} />                
-=======
+
                 <Logout setSessionToken={setSessionToken} updateToken={updateToken} setUserEmail={setUserEmail}/>
-                     
->>>>>>> d50f030b90034ff9ddc957b6370c7782470cea63
+
             </Route>
         </Switch>
      )
