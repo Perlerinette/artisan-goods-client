@@ -79,6 +79,7 @@ const items = [
     }
 
     return (
+
         
         
         
@@ -127,6 +128,9 @@ const items = [
            
        </div>
         <CardColumns className="CardColumns">
+
+    
+
             {displayCards()}
         </CardColumns>
         </div>

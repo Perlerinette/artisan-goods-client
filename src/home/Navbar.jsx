@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import{ Navbar, NavbarBrand, Collapse, NavItem, Nav, NavbarToggler } from 'reactstrap';
 import {  Link,  } from "react-router-dom";
-
-
-
+import{ Navbar, NavbarBrand, Collapse, NavItem, Nav, NavbarToggler, Button } from 'reactstrap';
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 
 const Sitebar = (props) => {
@@ -15,7 +13,6 @@ const Sitebar = (props) => {
         setIsOpen(newIsOpen);
     }
 
-   
 
     return ( 
 
@@ -29,6 +26,7 @@ const Sitebar = (props) => {
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar >
                     <Nav className="ml-auto" navbar>
+
                 <NavItem>
                 {/* <div class="container"> */}
     <a class="logo" href="#">
@@ -41,6 +39,7 @@ const Sitebar = (props) => {
                             <Link style={{color: "black"}} className='text-decoration-none pl-5' to='/home' >Home</Link>
                             <Link style={{color: "black"}} className='text-decoration-none pl-5' to='/myAccount'>My Shop</Link>
                             <Link style={{color: "black"}} className='text-decoration-none pl-5' to='/logOut'>Log Out</Link>
+
                         </NavItem>
                     </Nav>
                 </Collapse>

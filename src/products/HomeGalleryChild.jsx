@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import React from 'react';
-import { Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody} from 'reactstrap';
 import { withRouter } from "react-router-dom";
+import { Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody, Row, Col} from 'reactstrap';
+
 
 const HomeGalleryChild = (props) => {
+
     return ( 
 
 
@@ -14,7 +16,10 @@ const HomeGalleryChild = (props) => {
           <CardTitle tag="h5">{props.productItem.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
           <CardText>{props.productItem.description}</CardText>
-          <Button style={{background: "#4A5759"}}>Button</Button>
+          <CardText>
+            {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
+            </CardText>
+            <Button style={{background: "#4A5759"}}>Button</Button>
         </CardBody>
       </Card>
     </div>
