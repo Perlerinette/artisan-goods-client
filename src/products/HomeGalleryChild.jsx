@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import React from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody, Row, Col} from 'reactstrap';
+import ImageUploader from './ImageUploader';
 
 const HomeGalleryChild = (props) => {
 
@@ -15,7 +16,7 @@ const HomeGalleryChild = (props) => {
             {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
             </CardText>
             
-          <Button>Button</Button>
+            <ImageUploader/>
         </CardBody>
       </Card>
      );
