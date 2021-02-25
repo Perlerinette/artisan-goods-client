@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {Table, Button} from 'reactstrap';
-import HomeGalleryChild from './HomeGalleryChild';
+import MyPageCards from './MyPageCards';
 
 
 const ProductView = (props) => {
@@ -26,7 +26,7 @@ const ProductView = (props) => {
             return(
                 <tr key={index}>
                     <td>
-                         <HomeGalleryChild productItem={product}/>                       
+                         <MyPageCards productItem={product}/>                       
                     </td>
                     <td className='align-middle text-center'>
                         <Button color="warning" onClick={() => {props.editUpdateProduct(product); props.updateOn()}}>Edit</Button>{' '}
