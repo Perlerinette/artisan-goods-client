@@ -87,7 +87,7 @@ const items = [
             
         
          <UncontrolledCarousel className="Carousel" items={items} />
-
+        
         <div className="colorDiv">
             <h1 className="h1OpenShop">Open your own handmade shop!</h1>
             <button className="openShop">My Shop</button>

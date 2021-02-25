@@ -14,7 +14,7 @@ const HomeGalleryChild = (props) => {
         <CardImg  src={props.productItem.photoURL} width="50" height="200"  alt="Card image" />
         <CardBody className="CardBody" style = {{background: "white"}} >
           <CardTitle tag="h5">{props.productItem.name}</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
+          <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
           <CardText>{props.productItem.description}</CardText>
           <CardText>
             {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
