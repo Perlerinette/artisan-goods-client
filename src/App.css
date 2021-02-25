@@ -1,18 +1,15 @@
-.App {
+/* .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,11 +20,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +30,254 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.pageBody {
+  /* background-color: #f7e1d7; */
+  height: 2600px;
+}
+
+.topDiv {
+  background-color: black;
+  color: white;
+  font-size: xx-small;
+  text-align: center;
+  height: 25px;
+}
+
+.navbar {
+  height: 90px;
+  /* background-color: #dedbd2; */
+}
+.NavbarBrand {
+  position: relative;
+  left: 128px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.logo {
+  position: relative;
+}
+
+.tabs {
+  font-size: medium;
+  color: #ffddd2;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.Carousel {
+  height: 440px;
+  width: auto;
+  padding: px;
+}
+
+.carousel-inner {
+  height: 440px;
+  width: auto;
+}
+
+.carousel-item {
+  height: 440px;
+}
+
+.colorDiv {
+  background-color: #b0c4b1;
+
+  height: 188px;
+
+  width: autopx;
+  position: relative;
+  top: 18px;
+}
+
+/* .bodyDiv {
+  height: 900px;
+  width: 1300px;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  left: 40px;
+  top: 100px;
+  padding: 20px;
+  background-color: #dedbd2; */
+
+.h1OpenShop {
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: relative;
+  bottom: 20px;
+}
+
+.openShop {
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  position: relative;
+  left: 570px;
+  bottom: 0px;
+  background-color: #4a5759;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: large;
+  letter-spacing: 1px;
+}
+.CardColumns {
+  position: relative;
+  top: 900px;
+  left: 0px;
+}
+
+.Cards {
+  text-align: center;
+  justify-content: center;
+}
+
+.Card {
+  text-align: center;
+  height: 350px;
+  width: 100px;
+  border: 2px solid rgb(167, 16, 167);
+  background-color: seagreen;
+  padding: 20px;
+}
+
+.CardBody {
+  border: 2px solid #4a5759;
+}
+
+.socialmedia {
+  text-align: center;
+  display: inline-block;
+  padding: 0px;
+
+  color: black;
+}
+
+.pinkDiv {
+  height: 510px;
+  width: 700px;
+  position: relative;
+  left: 25px;
+  top: 40px;
+
+  background-color: #f7e1d7;
+}
+
+.pinkH1 {
+  color: black;
+  text-align: center;
+  position: relative;
+  left: 50px;
+  padding: 30px;
+  /* text-shadow: black 1px 1px; */
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.portrait {
+  position: relative;
+  bottom: 100px;
+  left: 30px;
+}
+
+.p {
+  width: 400px;
+  position: relative;
+  left: 270px;
+  bottom: 310px;
+}
+
+.bowl {
+  position: relative;
+  bottom: 220px;
+  left: 150px;
+}
+
+.vases {
+  position: relative;
+  bottom: 290px;
+  left: 220px;
+}
+.img1 {
+  position: relative;
+  left: 880px;
+  bottom: 430px;
+  /* border: solid 2px black;
+} */
+}
+.img2 {
+  position: relative;
+  left: 580px;
+  bottom: 170px;
+  /* border: solid 2px black; */
+}
+
+.img3 {
+  position: relative;
+  left: 592px;
+  bottom: 430px;
+  /* border: solid 2px black; */
+}
+
+.img4 {
+  position: relative;
+  left: 292px;
+  bottom: 170px;
+  /* border: solid 2px black;
+} */
+}
+
+.imgGrid {
+  position: relative;
+  right: 140px;
+  bottom: 40px;
+}
+
+.treeImg {
+  position: relative;
+  left: 30px;
+  bottom: 25px;
+  border-radius: 50%;
+}
+
+.footer {
+  background-color: #b0c4b1;
+  position: relative;
+  bottom: -1000px;
+}
+
+.custom-shape-divider-bottom-1613956483 {
+  position: relative;
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1613956483 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 121px;
+}
+
+.custom-shape-divider-bottom-1613956483 .shape-fill {
+  fill: #4a5759;
+}
+
+.greenDiv {
+  height: 1900px;
+  width: auto;
+  background-color: #4a5759;
+  position: relative;
+  top: -102px;
+}
+
+.groupDiv {
+  position: relative;
+  top: 60px;
 }
