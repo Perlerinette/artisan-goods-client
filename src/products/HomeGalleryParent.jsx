@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import HomeGalleryChild from './HomeGalleryChild';
-import {CardColumns, UncontrolledCarousel, Col, Row, Input, InputGroup} from 'reactstrap';
+import {CardColumns, UncontrolledCarousel, Col, Row, Input, InputGroup, InputGroupAddon, InputGroupText,} from 'reactstrap';
+import { Search } from 'react-bootstrap-icons';
 
 
 const HomeGalleryParent = (props) => {
@@ -91,7 +92,10 @@ const HomeGalleryParent = (props) => {
                 <Col sm="4"></Col>
                 <Col sm="4">
                     <InputGroup>
-                        <Input placeholder="search for goods.." type="input" onKeyPress={e => { if(e.key === "Enter") {search(e)}  }} />
+                    <InputGroupAddon addonType="prepend">
+                        <InputGroupText><Search /></InputGroupText>
+                    </InputGroupAddon>
+                    <Input placeholder="search for goods.." type="input" onKeyPress={e => { if(e.key === "Enter") {search(e)}  }} />   
                     </InputGroup>
                 </Col>
                 <Col sm="4"></Col>
