@@ -34,8 +34,9 @@ const Login = (props) => {
           }
 
     return(
-        <div>
-            <h1>Login</h1>
+    
+        <div className="login" style={{borderRadius: "15px", padding: "20px"}} >
+            <h1 style={{textAlign: "center"}}>Login</h1>
             <Form onSubmit={handleSubmit}>
             <FormGroup>
                     <Label htmlFor="email">Email</Label>
@@ -45,10 +46,12 @@ const Login = (props) => {
                     <Label htmlFor="password">Password</Label>
                     <Input onChange={(e)=>setPassword(e.target.value)} type="password" minLength={'4'} name="password" placeholder="Password" value={password} required/>
                 </FormGroup>
-                <Button type="submit">Login</Button>
-
+                <div className="align-middle text-center">
+                <Button  type="submit" >Login</Button>
+                </div>
             </Form>
         </div>
+        
     )
 }
 

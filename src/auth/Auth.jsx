@@ -5,7 +5,7 @@ import Login from './Login';
 
 const Auth = (props) => {
     return(
-        <Container className = "auth-container">
+        <Container className = "auth-container" >
             <Row>
                 <Col md="6">
                     <Signup updateToken={props.updateToken} setUserEmail={props.setUserEmail}/>

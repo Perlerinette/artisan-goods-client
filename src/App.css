@@ -1,37 +1,3 @@
-/* .App {
-  text-align: center;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-.App-link {
-  color: #61dafb;
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 .pageBody {
   /* background-color: #f7e1d7; */
   height: 2600px;
@@ -89,17 +55,6 @@
   position: relative;
   top: 18px;
 }
-
-/* .bodyDiv {
-  height: 900px;
-  width: 1300px;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  left: 40px;
-  top: 100px;
-  padding: 20px;
-  background-color: #dedbd2; */
 
 .h1OpenShop {
   color: white;
@@ -242,12 +197,6 @@
   border-radius: 50%;
 }
 
-.footer {
-  background-color: #b0c4b1;
-  position: relative;
-  bottom: -1000px;
-}
-
 .custom-shape-divider-bottom-1613956483 {
   position: relative;
   bottom: 100px;
@@ -280,4 +229,33 @@
 .groupDiv {
   position: relative;
   top: 60px;
+}
+
+.signUp {
+  height: 300px;
+  width: 300px;
+  background-color: #dedbd2;
+  position: relative;
+  top: 70px;
+  left: 200px;
+}
+
+.login {
+  height: 300px;
+  width: 300px;
+  background-color: #dedbd2;
+  position: relative;
+  top: 70px;
+  left: 30px;
+}
+
+.auth-container {
+  height: 600px;
+  width: 800px;
+}
+.footer {
+  background-color: #b0c4b1;
+  position: relative;
+  bottom: -600px;
+  height: 400px;
 }

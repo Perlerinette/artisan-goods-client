@@ -82,14 +82,16 @@ const items = [
 
         
         
-        
         <div className="pageBody">
             
         
          <UncontrolledCarousel className="Carousel" items={items} />
         
+
+        
         <div className="colorDiv">
             <h1 className="h1OpenShop">Open your own handmade shop!</h1>
+            
             <button className="openShop">My Shop</button>
         <div className="groupDiv">
             <div className="pinkDiv">
@@ -115,6 +117,7 @@ const items = [
                 <img className="img4" style={{ width: '300px', height: "250px"}} src="https://images.unsplash.com/photo-1601612628452-9e99ced43524?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bWVucyUyMHByb2R1Y3RzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"></img>
             </div>
             </div>
+           
                {/* shape divider app */}
            <div class="custom-shape-divider-bottom-1613956483">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -134,6 +137,7 @@ const items = [
             {displayCards()}
         </CardColumns>
         </div>
+       
     )
 
     
