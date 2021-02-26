@@ -18,7 +18,7 @@ const HomeGalleryChild = (props) => {
       <>
         <Card>
         <CardBody>
-          <CardImg src={props.productItem.photoURL} alt="card image" /> 
+          <CardImg src={props.productItem.photoURL} alt="card image" style={{width:   '100px'  }}/> 
           <CardTitle tag="h5">{props.productItem.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
           <CardText>
@@ -28,7 +28,7 @@ const HomeGalleryChild = (props) => {
             <Button onClick={toggleModal}>See Full Description</Button>
         </CardBody>
       </Card>
-
+      
         <Modal
         isOpen={isOpen}
         onRequestClose={toggleModal}
@@ -37,7 +37,7 @@ const HomeGalleryChild = (props) => {
         <div>
         <Card>
         <CardBody>
-          <CardImg src={props.productItem.photoURL} alt="card image" /> 
+          <CardImg src={props.productItem.photoURL} alt="card image" style={{width:   '300px'  }}  /> 
           <CardTitle tag="h2">{props.productItem.name}</CardTitle>
           <CardSubtitle tag="h5" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
           <CardText tag="h4">Description:</CardText>
