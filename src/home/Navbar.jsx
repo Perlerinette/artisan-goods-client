@@ -21,9 +21,6 @@ const Sitebar = (props) => {
   return (
     <>
       <div className="topDiv">
-        <h3 style={{ fontSize: "17px" }}>
-          Spend over $75 and get FREE SHIPPING!
-        </h3>
       </div>
       <Navbar light expand="md">
         <NavbarBrand>
