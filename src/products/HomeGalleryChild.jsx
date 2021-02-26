@@ -25,6 +25,9 @@ const HomeGalleryChild = (props) => {
           <CardTitle tag="h5">{props.productItem.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
           <CardText>
+            {props.productItem.description}
+          </CardText>
+          <CardText>
             {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
             </CardText>
            <Button style={{background: "#4A5759"}} onClick={toggleModal}>See Full Description</Button>

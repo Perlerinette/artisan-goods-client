@@ -4,6 +4,8 @@ import {CardColumns, UncontrolledCarousel} from 'reactstrap';
 
 
 const HomeGalleryParent = (props) => {
+
+    let word = props.searchBox; 
     const [products, setProducts] = useState([]);
 
     const fetchProducts = () => {
@@ -12,10 +14,16 @@ const HomeGalleryParent = (props) => {
             headers: new Headers ({
                 'Content-Type': 'application/json'
             })
-        }) .then( (res) => res.json())
-            .then((productData) => {console.log(productData)
-                setProducts(productData)
-            })
+        }) 
+        .then( (res) => res.json())
+        .then((productData) => {
+            console.log(productData);
+            const searchArray = productData.filter((x) => {
+                return x.name.toLowerCase().includes(word.toLowerCase()) > 0
+            } )
+            console.log('search ', searchArray);
+            setProducts(searchArray);
+        })
     }
   
 const items = [
@@ -67,11 +75,10 @@ const items = [
 
 ];
 
-
-
     useEffect(()=>{
         fetchProducts();
-    }, []); 
+    }, [word]); 
+    
 
     function displayCards(){
 
