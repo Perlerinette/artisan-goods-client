@@ -22,7 +22,7 @@ const ImgageUpload = (props) => {
         const formData = new FormData()
 
         formData.append('file', file)
-        formData.append('upload_preset', 'cloudinary-mayhem')
+        formData.append('upload_preset', 'artisan-goods-cloudinary')
         formData.append('api_key', '322896181919414')
         formData.append('signature', sig)
         formData.append('timestamp', ts)
