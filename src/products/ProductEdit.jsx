@@ -103,7 +103,7 @@ const [loading, setLoading] = useState(false)
                      </FormGroup>
             {/* START CLOUDINARY          */}
             <FormGroup>
-            <h1>Upload Image</h1>
+            <Label htmlFor="photoURL">Upload image</Label>
             <Input 
                 type="file"
                 placeholder="Upload a photo"

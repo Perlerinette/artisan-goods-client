@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import { InputGroup, InputGroupAddon, InputGroupText, Input, Row, Col } from 'reactstrap';
 import Auth from '../auth/Auth';
 import ProductIndex from '../products/ProductIndex';
 import HomeGalleryParent from '../products/HomeGalleryParent';
@@ -10,7 +9,6 @@ const Routes = (props) => {
 
     const [userEmail, setUserEmail] = useState('');
     const [sessionToken, setSessionToken] = useState("");
-    const [searchBox, setSearchBox] = useState('');
 
     useEffect(() => {
         if (localStorage.getItem("token")) {
@@ -33,36 +31,10 @@ const Routes = (props) => {
     }
 
 
-    const search = (e) => {
-        console.log('Hitted enter key !');
-        setSearchBox(e.target.value);
-        console.log('searchbox: ',searchBox); 
-    }
-
-    const searchByKeyword = () => {
-        return(
-            <>
-            <br/>
-            <Row>
-                <Col sm="4"></Col>
-                <Col sm="4">
-                    <InputGroup>
-                        <Input placeholder="search for goods.." type="input" onKeyPress={e => { if(e.key === "Enter") {search(e)}  }} />
-                    </InputGroup>
-                </Col>
-                <Col sm="4"></Col>
-            </Row>
-            <br/>
-
-            <HomeGalleryParent searchBox={searchBox}/>
-            </>
-        )
-    }
-
     return ( 
         <Switch>
             <Route exact path="/">
-                {searchByKeyword()}
+                <HomeGalleryParent />
             </Route>
             <Route exact path="/myShop">
                 {protectedViews()}

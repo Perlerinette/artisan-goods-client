@@ -1,12 +1,63 @@
 import React, { useState, useEffect } from 'react';
 import HomeGalleryChild from './HomeGalleryChild';
-import {CardColumns, UncontrolledCarousel} from 'reactstrap';
+import {CardColumns, UncontrolledCarousel, Col, Row, Input, InputGroup} from 'reactstrap';
 
 
 const HomeGalleryParent = (props) => {
 
-    let word = props.searchBox; 
     const [products, setProducts] = useState([]);
+    const [searchBox, setSearchBox] = useState('');
+
+    
+  
+    const items = [
+        {
+            src: 'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhbmtldHMlMjBrbml0fGVufDB8fDB8&auto=format&fit=crop&w=1000&q=60',
+            altText: 'Slide 1',
+            caption: 'Slide 3',
+            header: 'Slide 3 Header',
+            key: '3',
+            className: 'slide1'
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1532592068623-db1978e40df5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FuZGxlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60',
+            altText: 'Slide 1',
+            caption: 'Slide 3',
+            header: 'Slide 3 Header',
+            key: '3'
+        },
+    {
+        src: "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
+        altText: 'Slide 1',
+        caption: 'Slide 1',
+        header: 'Slide 1 Header',
+        key: '1',
+        className: 'items'
+        
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=3900&q=80',
+        altText: 'Slide 2',
+        caption: 'Slide 2',
+        header: 'Slide 2 Header',
+        key: '2'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1578426720323-6d3b67133446?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1605&q=80',
+        altText: 'Slide 2',
+        caption: 'Slide 2',
+        header: 'Slide 2 Header',
+        key: '2'
+    },
+    {
+        src: 'https://images.unsplash.com/photo-1517722014278-c256a91a6fba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        altText: 'Slide 2',
+        caption: 'Slide 2',
+        header: 'Slide 2 Header',
+        key: '2'
+    },
+
+    ];
 
     const fetchProducts = () => {
         fetch('http://localhost:3000/product/', {
@@ -19,65 +70,40 @@ const HomeGalleryParent = (props) => {
         .then((productData) => {
             console.log(productData);
             const searchArray = productData.filter((x) => {
-                return x.name.toLowerCase().includes(word.toLowerCase()) > 0
+                return x.name.toLowerCase().includes(searchBox.toLowerCase()) > 0
             } )
             console.log('search ', searchArray);
             setProducts(searchArray);
         })
     }
-  
-const items = [
-    {
-        src: 'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhbmtldHMlMjBrbml0fGVufDB8fDB8&auto=format&fit=crop&w=1000&q=60',
-        altText: 'Slide 1',
-        caption: 'Slide 3',
-        header: 'Slide 3 Header',
-        key: '3',
-        className: 'slide1'
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1532592068623-db1978e40df5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FuZGxlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60',
-        altText: 'Slide 1',
-        caption: 'Slide 3',
-        header: 'Slide 3 Header',
-        key: '3'
-      },
-  {
-    src: "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
-    altText: 'Slide 1',
-    caption: 'Slide 1',
-    header: 'Slide 1 Header',
-    key: '1',
-    className: 'items'
-    
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=3900&q=80',
-    altText: 'Slide 2',
-    caption: 'Slide 2',
-    header: 'Slide 2 Header',
-    key: '2'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1578426720323-6d3b67133446?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1605&q=80',
-    altText: 'Slide 2',
-    caption: 'Slide 2',
-    header: 'Slide 2 Header',
-    key: '2'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1517722014278-c256a91a6fba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-    altText: 'Slide 2',
-    caption: 'Slide 2',
-    header: 'Slide 2 Header',
-    key: '2'
-  },
 
-];
+    const search = (e) => {
+        console.log('Hitted enter key !');
+        setSearchBox(e.target.value);
+        console.log('searchbox: ',searchBox); 
+    }
+
+    const searchByKeyword = () => {
+        return(
+            <>
+            <br/>
+            <Row>
+                <Col sm="4"></Col>
+                <Col sm="4">
+                    <InputGroup>
+                        <Input placeholder="search for goods.." type="input" onKeyPress={e => { if(e.key === "Enter") {search(e)}  }} />
+                    </InputGroup>
+                </Col>
+                <Col sm="4"></Col>
+            </Row>
+            <br/>
+            </>
+        )
+    }
 
     useEffect(()=>{
         fetchProducts();
-    }, [word]); 
+    }, [searchBox]); 
     
 
     function displayCards(){
@@ -87,18 +113,12 @@ const items = [
 
     return (
 
-        
+        <>
         
         <div className="pageBody">
-            
-        
-         <UncontrolledCarousel className="Carousel" items={items} />
-        
-
-        
+            <UncontrolledCarousel className="Carousel" items={items} />
         <div className="colorDiv">
             <h1 className="h1OpenShop">Open your own handmade shop!</h1>
-            
             <button className="openShop">My Shop</button>
         <div className="groupDiv">
             <div className="pinkDiv">
@@ -137,14 +157,14 @@ const items = [
        <div className="bodyDiv">
            
        </div>
+        {searchByKeyword()}
         <CardColumns className="CardColumns">
-
-    
-
             {displayCards()}
         </CardColumns>
         </div>
        
+       </>
+
     )
 
     
