@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
-import HomeGalleryChild from './HomeGalleryChild';
 
 const ProductCreate = (props) => {
 
@@ -10,6 +9,34 @@ const ProductCreate = (props) => {
     const [photoURL, setPhotoURL] = useState('');
     const [inStock,setInStock] = useState(true);
     const [publish, setPublish] = useState(true);
+
+    /* **********
+    CLOUDINARY
+    *********** */
+    const [loading, setLoading] = useState(false)
+
+    const uploadImage = async e => {
+    const files = e.target.files
+    const data = new FormData()
+    data.append('file', files[0])
+    data.append('upload_preset', 'artisan-goods-cloudinary')
+    setLoading(true)
+    const res = await fetch(
+        'https://api.cloudinary.com/v1_1/natescloudinary/image/upload',
+        {
+            method: 'POST',
+            body: data
+        }
+    )
+    const file = await res.json()
+
+    setPhotoURL(file.secure_url)
+    setLoading(false)
+    }
+
+    /* **********
+    END CLOUDINARY
+    *********** */
 
     const handleSubmit = (e) => {
 
@@ -70,6 +97,21 @@ const ProductCreate = (props) => {
                     <Label htmlFor="description">Description</Label>
                     <Input type="textarea" name="description" value={description} onChange={(e) => setDescription(e.target.value)}/>
                 </FormGroup>
+                    {/* START CLOUDINARY          */}
+                    <FormGroup>
+                    <h1>Upload Image</h1>
+                    <Input 
+                        type="file"
+                        placeholder="Upload a photo"
+                        onChange={uploadImage}
+                    />
+                    {loading ? (
+                        <h3>Loading...</h3>
+                    ): (
+                        <img src={photoURL} style={{width:   '150px'  }} style={{height:   '150px'  }} />
+                    )} 
+                    </FormGroup>  
+                    {/* END CLOUDINARY          */}
                 <FormGroup >
                     <legend>Availability</legend>
                     <FormGroup check>

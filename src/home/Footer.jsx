@@ -7,9 +7,17 @@ const Footer = () => {
     const theDate = '2021';
 
     return (
+        
+
+       
+        <div className="footer">
+            
         <div className='footer-copyright text-center ml-auto py-3'>  
             &copy; {theDate} - Inception Team - Blue Badge      
         </div>
+        
+        </div>
+      
     );
 };
 
