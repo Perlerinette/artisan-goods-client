@@ -27,18 +27,10 @@ const HomeGalleryChild = (props) => {
           <CardText>
             {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
             </CardText>
-          <Button style={{background: "#4A5759"}}>Button</Button>
+           <Button style={{background: "#4A5759"}} onClick={toggleModal}>See Full Description</Button>
         </CardBody>
       </Card>
-    </div>
-     );
-}
-
-            
-            <Button onClick={toggleModal}>See Full Description</Button>
-        </CardBody>
-      </Card>
-      
+       
         <Modal
         isOpen={isOpen}
         onRequestClose={toggleModal}
@@ -60,7 +52,8 @@ const HomeGalleryChild = (props) => {
         </div>
         <button onClick={toggleModal}>Close</button>
         </Modal>
-        </>
+        </div>
+        
       );
     };
 
