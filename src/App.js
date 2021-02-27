@@ -8,11 +8,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 function App() {
   return (
     <div>
-      <Router>
-        <SiteBar />
-        <Routes />
-      </Router>
-      <Footer />
+      <div className="pageBody">
+        <Router>
+          <SiteBar />
+          <Routes />
+        </Router>
+        <Footer />
+      </div>
     </div>
   );
 }

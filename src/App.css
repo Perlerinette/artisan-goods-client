@@ -1,6 +1,4 @@
 .pageBody {
-  /* background-color: #f7e1d7; */
-  height: 2600px;
 }
 
 .topDiv {
@@ -8,20 +6,32 @@
   color: white;
   font-size: xx-small;
   text-align: center;
-  height: 25px;
+  height: 20px;
+}
+.custom-shape-divider-top-1614310303 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 160px;
+  top: 11px;
+}
+
+.custom-shape-divider-top-1614310303 .shape-fill {
+  fill: black;
 }
 
 .navbar {
-  height: 90px;
-  /* background-color: #dedbd2; */
+  height: 160px;
 }
+
 .NavbarBrand {
   position: relative;
-  left: 128px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+
 .logo {
   position: relative;
+  text-align: center !important;
 }
 
 .tabs {
@@ -34,7 +44,8 @@
 .Carousel {
   height: 440px;
   width: auto;
-  padding: px;
+  padding: 30px;
+  bottom: 20px;
 }
 
 .carousel-inner {
@@ -45,6 +56,41 @@
 .carousel-item {
   height: 440px;
 }
+
+
+.signUp {
+  height: 400px;
+  width: 300px;
+  background-color: #white;
+  color: black;
+  border: 1px solid black;
+  position: relative;
+  top: 70px;
+  left: 200px;
+}
+
+.container {
+  justify-content: center;
+}
+
+.login {
+  height: 400px;
+  width: 300px;
+  background-color: #white;
+  border: 1px solid black;
+  color: black;
+  position: relative;
+  top: 70px;
+  left: 30px;
+}
+
+.auth-container {
+  height: 600px;
+  width: 800px;
+}
+
+.custom-shape-divider-bottom-1614346458 {
+  position: absolute;
 
 .colorDiv {
   background-color: #b0c4b1;
@@ -59,31 +105,23 @@
 .custom-shape-divider-bottom-1613956483 {
   position: relative;
   bottom: 100px;
+
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1613956483 svg {
+.custom-shape-divider-bottom-1614346458 svg {
   position: relative;
   display: block;
-  width: calc(100% + 1.3px);
-  height: 121px;
+  width: calc(145% + 1.3px);
+  height: 153px;
 }
 
-.custom-shape-divider-bottom-1613956483 .shape-fill {
-  fill: #4a5759;
-}
 
-.greenDiv {
-  height: 1900px;
-  width: auto;
-  background-color: #4a5759;
-  position: relative;
-  top: -102px;
-}
+.custom-shape-divider-bottom-1614346458 .shape-fill {
+  fill: #b0c4b1;
 
 .signUp {
   height: 300px;
@@ -92,24 +130,17 @@
   position: relative;
   top: 70px;
   left: 200px;
+
 }
 
-.login {
-  height: 300px;
-  width: 300px;
-  background-color: #dedbd2;
-  position: relative;
-  top: 70px;
-  left: 30px;
+.flexbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
 }
 
-.auth-container {
-  height: 600px;
-  width: 800px;
-}
-.footer {
-  background-color: #b0c4b1;
-  position: relative;
-  bottom: -600px;
-  height: 400px;
+.modalCss {
+  width: 700px !important;
+  margin: auto;
 }
