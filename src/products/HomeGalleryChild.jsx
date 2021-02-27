@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import React from 'react';
 import { withRouter } from "react-router-dom";
-import { Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody, Row, Col} from 'reactstrap';
-import Modal from "react-modal";
+import { Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody, Row, Col,  Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+// import Modal from "react-modal";
+
 
 
 
@@ -10,11 +11,14 @@ import Modal from "react-modal";
 
 const HomeGalleryChild = (props) => {
 
-  const [isOpen, setIsOpen] = useState(false);
+  const {
+    buttonLabel,
+    className
+  } = props;
 
-  function toggleModal() {
-    setIsOpen(!isOpen);
-  }
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
 
     return ( 
      
@@ -27,12 +31,36 @@ const HomeGalleryChild = (props) => {
           <CardText>
             {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
             </CardText>
-           <Button style={{background: "#4A5759"}} onClick={toggleModal}>See Full Description</Button>
+            <Button style={{background: "#4A5759"}} onClick={toggle}>{buttonLabel}See Full Description</Button>
+           {/* <Button style={{background: "#4A5759"}} onClick={toggleModal}>See Full Description</Button> */}
         </CardBody>
       </Card>
        
+      {/* <Button color="danger" onClick={toggle}>{buttonLabel}</Button> */}
+      <Modal isOpen={modal} toggle={toggle} className={className}>
+        <ModalHeader  toggle={toggle}>{props.productItem.name}</ModalHeader>
+        
+        <ModalBody style={{textAlign: "center"}}>
+          <img style={{ width:350, height:270}}src={props.productItem.photoURL}></img>
+          <br/>
+          <br/>
+          <div>
+      
+        {props.productItem.description}
+        <br/>
+        {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
+        ${props.productItem.price}
+        </div>
+        </ModalBody>
+        <ModalFooter>
+          <Button style={{backgroundColor: "#4a5759", color: "white", width: 150, height: 40, textAlign: "center"}}  color="primary" onClick={toggle}>Close</Button>{' '}
+         
+        </ModalFooter>
+      </Modal>
+     
+   
        
-        <Modal
+        {/* <Modal style={{width: 600}}
         isOpen={isOpen}
         onRequestClose={toggleModal}
         contentLabel="My dialog"
@@ -42,7 +70,7 @@ const HomeGalleryChild = (props) => {
          
         >
         <div>
-        <Card>
+        <Card  className="cardModal" style={{width: 500}}>
         <CardBody style={{textAlign: 'center'}}>
           <CardImg src={props.productItem.photoURL} alt="card image" style={{width:   '450px', height: '300px', padding: "20px"  }}  /> 
           <CardTitle tag="h2">{props.productItem.name}</CardTitle>
@@ -58,7 +86,7 @@ const HomeGalleryChild = (props) => {
         <div className='align-middle text-center'>
         <button style={{backgroundColor: "#4a5759", color: "white", width: 150, height: 40}} onClick={toggleModal}>Close</button>
         </div>
-        </Modal>
+        </Modal> */}
         </div>
       
         
