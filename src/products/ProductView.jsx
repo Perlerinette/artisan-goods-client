@@ -21,11 +21,10 @@ const ProductView = (props) => {
         <tr key={index}>
           <td>
             <MyPageCards productItem={product} />
-            <td className="buttonsDiv">
-              <div class="flexbox-container">
+            <div class="flexbox-container">
                 <div class="flexbox-item-1">
                   <Button
-                    style={{ backgroundColor: "lightGrey" }}
+                    style={{ backgroundColor: "lightGrey", marginRight: 5, width: 100 }}
                     onClick={() => {
                       props.editUpdateProduct(product);
                       props.updateOn();
@@ -36,7 +35,7 @@ const ProductView = (props) => {
                 </div>
                 <div class="flexbox-item-2">
                   <Button
-                    style={{ backgrounsColor: "lightGrey" }}
+                    style={{ backgroundColor: "grey", marginLeft: 5, width: 100}}
                     onClick={() => {
                       deleteProduct(product);
                     }}
@@ -45,6 +44,8 @@ const ProductView = (props) => {
                   </Button>
                 </div>
               </div>
+            <td>
+              
             </td>
           </td>
         </tr>

@@ -54,7 +54,7 @@ const ProductIndex = (props) => {
         </div>
         <Container>
             <Row>
-                <Col md="3" style={{backgroundColor: "#F7E1D7", width: "400px", height: 730, padding: 15, borderRadius: 15}}>
+                <Col md="3" style={{backgroundColor: "#F7E1D7", width: "400px",  height: 730, padding: 15, borderRadius: 15}}>
                 
                     <ProductCreate getListOfProducts={getListOfProducts} token={props.token}/>
                    

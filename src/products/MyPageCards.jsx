@@ -10,7 +10,7 @@ const HomeGalleryChild = (props) => {
 
     return ( 
       <div>
-        <Card className="myShopCard" style={{width: 500, height: 350, marginLeft: "20%"}}>
+        <Card className="myShopCard" style={{width: 550, height: 500, marginLeft: "16%"}}>
         <CardBody style={{boxShadow: "2px 2px"}}>
           <CardImg src={props.productItem.photoURL} alt="card image" style={{width:   '175px'  }} /> 
           <CardTitle tag="h5">{props.productItem.name}</CardTitle>
@@ -19,6 +19,7 @@ const HomeGalleryChild = (props) => {
           <CardText>
             {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
             </CardText>
+            
             
             
             
