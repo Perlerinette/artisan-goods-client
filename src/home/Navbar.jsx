@@ -9,6 +9,8 @@ import {
   Button,
 } from "reactstrap";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 const Sitebar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +23,11 @@ const Sitebar = (props) => {
   return (
     <>
       <div className="topDiv">
+  
+      <a style={{color: "white"}} href="https://www.linkedin.com/" title="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <FontAwesomeIcon style={{color: "white"}} icon={["faCoffee", "coffee"]} />
       {/* <div class="custom-shape-divider-top-1614310303">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <rect x="1200" height="3.6"></rect>

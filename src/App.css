@@ -1,6 +1,4 @@
 .pageBody {
-  /* background-color: #f7e1d7; */
-  height: 2600px;
 }
 
 .topDiv {
@@ -8,7 +6,7 @@
   color: white;
   font-size: xx-small;
   text-align: center;
-  height: 15px;
+  height: 20px;
 }
 .custom-shape-divider-top-1614310303 svg {
   position: relative;
@@ -23,18 +21,17 @@
 }
 
 .navbar {
-  height: 200px;
-  /* background-color: #dedbd2; */
+  height: 160px;
 }
 
 .NavbarBrand {
   position: relative;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+
 .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  text-align: center !important;
 }
 
 .tabs {
@@ -47,7 +44,8 @@
 .Carousel {
   height: 440px;
   width: auto;
-  padding: px;
+  padding: 30px;
+  bottom: 20px;
 }
 
 .carousel-inner {
@@ -60,20 +58,26 @@
 }
 
 .signUp {
-  height: 300px;
+  height: 400px;
   width: 300px;
-  background-color: #dedbd2;
-  box-shadow: 3px 3px;
+  background-color: #4a5759;
+  color: white;
+  border: 1px solid black;
   position: relative;
   top: 70px;
   left: 200px;
 }
 
+.container {
+  justify-content: center;
+}
+
 .login {
-  height: 300px;
+  height: 400px;
   width: 300px;
-  background-color: #dedbd2;
-  box-shadow: 3px 3px;
+  background-color: #4a5759;
+  border: 1px solid black;
+  color: white;
   position: relative;
   top: 70px;
   left: 30px;
@@ -84,18 +88,54 @@
   width: 800px;
 }
 
-.footer {
-  background-color: #b0c4b1;
-  position: relative;
-  bottom: -600px;
-  height: 400px;
-}
-
-.custom-shape-divider-top-1614310303 {
+.custom-shape-divider-bottom-1614346458 {
   position: absolute;
-  top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
+}
+
+.custom-shape-divider-bottom-1614346458 svg {
+  position: relative;
+  display: block;
+  width: calc(145% + 1.3px);
+  height: 153px;
+}
+
+.custom-shape-divider-bottom-1614346458 .shape-fill {
+  fill: #b0c4b1;
+}
+
+.cardCss {
+  box-shadow: 2px 2px;
+}
+
+/* .auth-container {
+  background: rgb(237, 175, 184);
+  background: linear-gradient(
+    0deg,
+    rgba(237, 175, 184, 1) 0%,
+    rgba(247, 225, 215, 1) 40%,
+    rgba(255, 255, 255, 1) 80%
+  );
+  width: auto;
+  height: 500px;
+} */
+/* 
+.auth-container {
+  background: rgb(74, 87, 89);
+  background: linear-gradient(
+    0deg,
+    rgba(74, 87, 89, 1) 0%,
+    rgba(176, 196, 177, 1) 51%,
+    rgba(255, 255, 255, 1) 98%
+  );
+} */
+
+.buttonsDiv {
+  justify-content: center !important;
+  position: relative;
+  left: 140px;
+  /* needs to be changed */
 }

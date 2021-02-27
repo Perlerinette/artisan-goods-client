@@ -9,9 +9,9 @@ const HomeGalleryChild = (props) => {
 
 
     return ( 
-      <>
-        <Card>
-        <CardBody>
+      <div>
+        <Card className="myShopCard" style={{width: 500, height: 350, marginLeft: "20%"}}>
+        <CardBody style={{boxShadow: "2px 2px"}}>
           <CardImg src={props.productItem.photoURL} alt="card image" style={{width:   '175px'  }} /> 
           <CardTitle tag="h5">{props.productItem.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
@@ -25,7 +25,7 @@ const HomeGalleryChild = (props) => {
         </CardBody>
       </Card>
 
-        </>
+        </div>
       );
     };
  

@@ -19,10 +19,10 @@ const HomeGalleryChild = (props) => {
     return ( 
      
       <div className="Cards">
-      <Card className="Card" style={{textAlign: "center" , width: '300px', height: "400px", padding: "20px"}}>
-        <CardImg  src={props.productItem.photoURL}  width="300" height="200"  alt="Card image" />
+      <Card className="CardCss" style={{textAlign: "center" , width: '350px', height: "450px", padding: "0px", marginBottom: 20, boxShadow: " lightGrey 3px 3px"}}>
+        <CardImg  src={props.productItem.photoURL}  width="350" height="270"  alt="Card image" />
         <CardBody className="CardBody" style = {{background: "white"}} >
-          <CardTitle tag="h5">{props.productItem.name}</CardTitle>
+          <CardTitle tag="h5" style={{fontSize: 17}}>{props.productItem.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
           <CardText>
             {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
@@ -31,10 +31,12 @@ const HomeGalleryChild = (props) => {
         </CardBody>
       </Card>
        
+       
         <Modal
         isOpen={isOpen}
         onRequestClose={toggleModal}
         contentLabel="My dialog"
+    
 
         
          
@@ -42,7 +44,7 @@ const HomeGalleryChild = (props) => {
         <div>
         <Card>
         <CardBody style={{textAlign: 'center'}}>
-          <CardImg src={props.productItem.photoURL} alt="card image" style={{width:   '450px', height: '300px', padding: "20px" }}  /> 
+          <CardImg src={props.productItem.photoURL} alt="card image" style={{width:   '450px', height: '300px', padding: "20px"  }}  /> 
           <CardTitle tag="h2">{props.productItem.name}</CardTitle>
           <CardSubtitle tag="h5" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
           <CardText tag="h4">Description:</CardText>
@@ -54,11 +56,11 @@ const HomeGalleryChild = (props) => {
       </Card>
         </div>
         <div className='align-middle text-center'>
-        <button onClick={toggleModal}>Close</button>
+        <button style={{backgroundColor: "#4a5759", color: "white", width: 150, height: 40}} onClick={toggleModal}>Close</button>
         </div>
         </Modal>
         </div>
-       
+      
         
       );
     };

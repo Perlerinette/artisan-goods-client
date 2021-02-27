@@ -83,7 +83,7 @@ const ProductCreate = (props) => {
 
     return ( 
         <>
-            <h4>Have a new item for sale?</h4>
+            <h4 style={{fontSize: 30, textAlign: "center"}}>Have a new item for sale?</h4>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor="name">Name</Label>
@@ -99,7 +99,7 @@ const ProductCreate = (props) => {
                 </FormGroup>
                     {/* START CLOUDINARY          */}
                     <FormGroup>
-                    <h1>Upload Image</h1>
+                    <h1 style={{fontSize: 25}}>Upload Image</h1>
                     <Input 
                         type="file"
                         placeholder="Upload a photo"
@@ -141,7 +141,9 @@ const ProductCreate = (props) => {
                     </Label>
                 </FormGroup> */}
                 <br />
-                <Button type="submit">List it!</Button>
+                <div className='align-middle text-center'>
+                <Button  style={{width: 120, backgroundColor: "lightGrey", color: "black"}} type="submit">List it!</Button>
+                </div>
             </Form>
         </>
      );

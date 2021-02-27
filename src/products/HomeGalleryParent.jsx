@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import HomeGalleryChild from './HomeGalleryChild';
-import {CardColumns, UncontrolledCarousel} from 'reactstrap';
+import {CardDeck, UncontrolledCarousel} from 'reactstrap';
 
 
 const HomeGalleryParent = (props) => {
@@ -81,21 +81,20 @@ const items = [
     return (
 
         
-        
-        <div className="pageBody">
+  <>
             
         
          <UncontrolledCarousel className="Carousel" items={items} />
         
 
 
-        <CardColumns className="CardColumns" style={{padding: "50px"}}>
+        <CardDeck style={{justifyContent: 'center', padding: 60, marginBottom: 20}} >
 
     
 
             {displayCards()}
-        </CardColumns>
-        </div>
+        </CardDeck>
+        </>
        
     )
 

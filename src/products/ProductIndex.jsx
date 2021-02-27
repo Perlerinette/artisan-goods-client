@@ -48,14 +48,16 @@ const ProductIndex = (props) => {
     return ( 
         <>
         <div className='text-right' >
-                <Col md='12'>
+                <Col style ={{padding: '70px'}} md='12'>
                 <h6 className='font-italic'>{props.email} is connected</h6>
                 </Col>
         </div>
         <Container>
             <Row>
-                <Col md="3">
+                <Col md="3" style={{backgroundColor: "#F7E1D7", width: "400px", height: 730, padding: 15, borderRadius: 15}}>
+                
                     <ProductCreate getListOfProducts={getListOfProducts} token={props.token}/>
+                   
                 </Col>
                 <Col md="9" className='text-center'>
                     <ProductView getListOfProducts={getListOfProducts} productList={productList} editUpdateProduct={editUpdateProduct} updateOn={updateOn} token={props.token}/>
