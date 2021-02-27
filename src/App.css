@@ -57,6 +57,7 @@
   height: 440px;
 }
 
+
 .signUp {
   height: 400px;
   width: 300px;
@@ -90,6 +91,21 @@
 
 .custom-shape-divider-bottom-1614346458 {
   position: absolute;
+
+.colorDiv {
+  background-color: #b0c4b1;
+
+  height: 188px;
+
+  width: autopx;
+  position: relative;
+  top: 18px;
+}
+
+.custom-shape-divider-bottom-1613956483 {
+  position: relative;
+  bottom: 100px;
+
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -103,8 +119,18 @@
   height: 153px;
 }
 
+
 .custom-shape-divider-bottom-1614346458 .shape-fill {
   fill: #b0c4b1;
+
+.signUp {
+  height: 300px;
+  width: 300px;
+  background-color: #dedbd2;
+  position: relative;
+  top: 70px;
+  left: 200px;
+
 }
 
 .flexbox-container {

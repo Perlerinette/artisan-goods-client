@@ -23,7 +23,7 @@ const Sitebar = (props) => {
   return (
     <>
       <div className="topDiv">
-  
+
       <a style={{color: "white"}} href="https://www.linkedin.com/" title="LinkedIn"
               ><i class="fab fa-linkedin"></i
             ></a>
@@ -36,6 +36,7 @@ const Sitebar = (props) => {
     </svg>
 </div> */}
       
+
       </div>
       <Navbar light expand="md">
         <NavbarBrand>

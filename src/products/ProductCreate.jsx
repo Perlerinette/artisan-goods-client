@@ -99,7 +99,7 @@ const ProductCreate = (props) => {
                 </FormGroup>
                     {/* START CLOUDINARY          */}
                     <FormGroup>
-                    <h1 style={{fontSize: 25}}>Upload Image</h1>
+                    <Label htmlFor="photoURL">Upload image</Label>
                     <Input 
                         type="file"
                         placeholder="Upload a photo"

@@ -25,6 +25,7 @@ const HomeGalleryChild = (props) => {
       <div className="Cards">
       <Card className="CardCss" style={{textAlign: "center" , width: '350px', height: "450px", padding: "0px", marginBottom: 20, boxShadow: " lightGrey 2px 2px"}}>
         <CardImg  src={props.productItem.photoURL}  width="350" height="270"  alt="Card image" />
+
         <CardBody className="CardBody" style = {{background: "white"}} >
           <CardTitle tag="h5" style={{fontSize: 17}}>{props.productItem.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
