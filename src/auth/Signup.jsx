@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import {Container, Form, FormGroup, Label, Input, Button, InputGroup, InputGroupAddon, InputGroupText} from 'reactstrap';
+import { LockFill, PersonFill, Eye, EyeSlash } from 'react-bootstrap-icons';
 import {useHistory} from 'react-router-dom';
 
 const Signup = (props) => {
@@ -30,17 +31,28 @@ const Signup = (props) => {
     }
 
     return(
-      <div>
+        <div>
         <div className="signUp" style={{borderRadius: "15px", padding: "20px"}}>
             <h1 style={{textAlign: "center"}}>Sign Up</h1>
             <Form onSubmit={handleSubmit}>
-            <FormGroup>
+                <FormGroup>
                     <Label htmlFor="email">Email</Label>
-                    <Input onChange={(e)=>setEmail(e.target.value)} type="email" name="email" placeholder="Email" value={email} required  />
+                    <InputGroup>
+                        <InputGroupAddon addonType="prepend">
+                            <InputGroupText><PersonFill /></InputGroupText>
+                        </InputGroupAddon>
+                        <Input onChange={(e)=>setEmail(e.target.value)} type="email" name="email" placeholder="Email" value={email} required  />
+                    </InputGroup>
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="password">Password</Label>
-                    <Input onChange={(e)=>setPassword(e.target.value)} type="password" minLength={'4'} name="password" placeholder="Password" value={password} required />
+                    <InputGroup>
+                        <InputGroupAddon addonType="prepend">
+                            <InputGroupText><LockFill /></InputGroupText>
+                        </InputGroupAddon>
+                        <Input onChange={(e)=>setPassword(e.target.value)} type="password" minLength={'4'} name="password" placeholder="****" value={password} required/>
+                        <Eye/>
+                    </InputGroup>
                 </FormGroup>
                 <div className="align-middle text-center">
                 <Button className="submitBtn" type="submit">Signup</Button>

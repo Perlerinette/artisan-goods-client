@@ -118,7 +118,6 @@ const HomeGalleryParent = (props) => {
     return (
 
         <>
-        
         <div className="pageBody">
             <UncontrolledCarousel className="Carousel" items={items} />
         <div className="colorDiv">

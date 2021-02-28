@@ -1,37 +1,40 @@
 import React, { useState } from 'react';
-import {Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
 const ProductCreate = (props) => {
+
+    //used in case no picture set in the card
+    const photoNoAvail = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fvcunited.club%2Fno-image-available-2-jpg%2F&psig=AOvVaw3sJr6JBH3tKhVKKDVyWw8L&ust=1614528594709000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPDCzOy5iu8CFQAAAAAdAAAAABAI';
 
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
     const [description, setDescription] = useState('');
-    const [photoURL, setPhotoURL] = useState('');
+    const [photoURL, setPhotoURL] = useState(photoNoAvail);
     const [inStock,setInStock] = useState(true);
     const [publish, setPublish] = useState(true);
 
     /* **********
     CLOUDINARY
     *********** */
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
 
     const uploadImage = async e => {
-    const files = e.target.files
-    const data = new FormData()
-    data.append('file', files[0])
-    data.append('upload_preset', 'artisan-goods-cloudinary')
-    setLoading(true)
-    const res = await fetch(
-        'https://api.cloudinary.com/v1_1/natescloudinary/image/upload',
-        {
-            method: 'POST',
-            body: data
-        }
-    )
-    const file = await res.json()
+        const files = e.target.files;
+        const data = new FormData();
+        data.append('file', files[0]);
+        data.append('upload_preset', 'artisan-goods-cloudinary');
+        setLoading(true);
+        const res = await fetch(
+            'https://api.cloudinary.com/v1_1/natescloudinary/image/upload',
+            {
+                method: 'POST',
+                body: data
+            }
+        )
+        const file = await res.json();
 
-    setPhotoURL(file.secure_url)
-    setLoading(false)
+        setPhotoURL(file.secure_url);
+        setLoading(false);
     }
 
     /* **********
@@ -66,7 +69,7 @@ const ProductCreate = (props) => {
             setPrice(0);
             setDescription('');
             setInStock(true);
-            setPhotoURL('');
+            setPhotoURL(photoNoAvail);
             setPublish(true);
             props.getListOfProducts();
 
@@ -89,51 +92,41 @@ const ProductCreate = (props) => {
                     <Label htmlFor="name">Name</Label>
                     <Input name="name" value={name} onChange={(e) => setName(e.target.value)}/>
                 </FormGroup>
+
                 <FormGroup>
                     <Label htmlFor="price">Price</Label>
                     <Input type="number" min="0" name='price' value={price} onChange={(e) => setPrice(e.target.value)}/>
                 </FormGroup>
+
                 <FormGroup>
                     <Label htmlFor="description">Description</Label>
                     <Input type="textarea" name="description" value={description} onChange={(e) => setDescription(e.target.value)}/>
                 </FormGroup>
-                    {/* START CLOUDINARY          */}
-                    <FormGroup>
-                    <Label htmlFor="photoURL">Upload image</Label>
-                    <Input 
-                        type="file"
-                        placeholder="Upload a photo"
-                        onChange={uploadImage}
-                    />
-                    {loading ? (
-                        <h3>Loading...</h3>
-                    ): (
-                        <img src={photoURL} style={{width:   '150px'  }} style={{height:   '150px'  }} />
-                    )} 
-                    </FormGroup>  
-                    {/* END CLOUDINARY          */}
+            
                 <FormGroup >
-                    <legend>Availability</legend>
+                    <Label htmlFor="availability">Availability</Label>
                     <FormGroup check>
-                    <Label htmlFor='availability' check>
+                    <Label check>
                         <Input type="radio" name="availability" value='inStock' defaultchecked onChange={(e) => onValueChange(e)}/>{' '}
                         In Stock
                     </Label>
                     </FormGroup>
                     <FormGroup check>
                     <Label check>
-                        <Input type="radio" name="availability" value='OutOfStock'  onChange={(e) => onValueChange(e)}/>{' '}
+                        <Input type="radio" name="availability" value='OutOfStock'  onChange={(e) => onValueChange(e)}/>
                         Out of Stock
                     </Label>
                     </FormGroup>
                 </FormGroup>
-                {/* <FormGroup>
+
+                {/* START CLOUDINARY          */}
+                <FormGroup>
                     <Label htmlFor="photoURL">Upload image</Label>
-                    <Input type="file" accept='image/*' name="file" value={photoURL} onChange={(e) => setPhotoURL(e.target.value)}  />
-                    <FormText color="muted">
-                    Upload any image file.
-                    </FormText>
-                </FormGroup> */}
+                    <Input type="file" placeholder="Upload a photo" onChange={uploadImage}/>
+                    {loading ? <h6>Loading...</h6> : <img src={photoURL} style={{width:'150px'}} style={{height:'150px'}} /> } 
+                    </FormGroup>  
+                    {/* END CLOUDINARY          */}
+                    
                 {/* <FormGroup check>
                     <Label htmlFor='publish' check>
                     <Input type="checkbox" value={publish} onChange={(e) => setPublish(e.target.value)} />{' '}
@@ -141,7 +134,7 @@ const ProductCreate = (props) => {
                     </Label>
                 </FormGroup> */}
                 <br />
-                <Button type="submit">List it!</Button>
+                <Button disabled={loading} type="submit">List it!</Button>
             </Form>
         </>
      );
