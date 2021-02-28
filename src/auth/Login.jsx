@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Form, FormGroup, Label, Input, Button, InputGroup, InputGroupAddon, InputGroupText} from 'reactstrap';
-import { LockFill, PersonFill, Eye, Eyeslash } from 'react-bootstrap-icons';
+import { LockFill, PersonFill, EyeFill, EyeSlashFill } from 'react-bootstrap-icons';
 import {useHistory} from 'react-router-dom';
 
 const Login = (props) => {
@@ -9,6 +9,14 @@ const Login = (props) => {
     const [password, setPassword] = useState('');
     const history = useHistory();
 
+    // show/hide password
+    const [type, setType] = useState('password');
+    const [isPwdVisible, setIsPwdVisible] = useState(false);
+    const showPwd = () => {
+        setIsPwdVisible(!isPwdVisible);
+        isPwdVisible ? setType('password') : setType('text');
+    }
+    const toggleIcon = () => isPwdVisible ? <EyeSlashFill /> : <EyeFill />;
 
 
     const handleSubmit = (event) => {
@@ -57,7 +65,10 @@ const Login = (props) => {
                     <InputGroupAddon addonType="prepend">
                         <InputGroupText><LockFill /></InputGroupText>
                     </InputGroupAddon>
-                    <Input onChange={(e)=>setPassword(e.target.value)} type="password" minLength={'4'} name="password" placeholder="****" value={password} required />
+                    <Input onChange={(e)=>setPassword(e.target.value)} type={type} minLength={'4'} name="password" placeholder="****" value={password} required />
+                    <InputGroupAddon addonType="append" >
+                            <InputGroupText ><span style={{cursor:'pointer'}} onClick={showPwd}>{toggleIcon()}</span></InputGroupText>
+                    </InputGroupAddon>
                   </InputGroup>
               </FormGroup>
 

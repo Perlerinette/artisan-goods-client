@@ -8,6 +8,7 @@ const Auth = (props) => {
     const [displayLogin, setDisplayLogin] = useState(false);
     const toggle = () => setDisplayLogin(!displayLogin);
 
+
     return(
         <Container className = "auth-container align-middle"  >
             {/* <Row >
@@ -23,7 +24,8 @@ const Auth = (props) => {
                         <Signup updateToken={props.updateToken} setUserEmail={props.setUserEmail}/> }
             </Row>
             <Row className='justify-content-md-center'>
-                {displayLogin ? <a style={{cursor:'pointer'}} onClick={toggle}>New here? Register.</a>: <a style={{cursor:'pointer'}} onClick={toggle}>Already have an account? Log in.</a>}
+                {displayLogin ? <a style={{cursor:'pointer'}} onClick={toggle} >New here? Register.</a> : 
+                <a style={{cursor:'pointer'}} onClick={toggle}>Already have an account? Log in.</a>}
             </Row>
         </Container>
     )

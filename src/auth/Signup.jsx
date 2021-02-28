@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
-import {Container, Form, FormGroup, Label, Input, Button, InputGroup, InputGroupAddon, InputGroupText} from 'reactstrap';
-import { LockFill, PersonFill, Eye, EyeSlash } from 'react-bootstrap-icons';
+import {Form, FormGroup, Label, Input, Button, InputGroup, InputGroupAddon, InputGroupText} from 'reactstrap';
+import { LockFill, PersonFill, EyeFill, EyeSlashFill } from 'react-bootstrap-icons';
 import {useHistory} from 'react-router-dom';
 
 const Signup = (props) => {
+
+    const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHistory();
+
+    // show/hide password
+    const [type, setType] = useState('password');
+    const [isPwdVisible, setIsPwdVisible] = useState(false);
+    const showPwd = () => {
+        setIsPwdVisible(!isPwdVisible);
+        isPwdVisible ? setType('password') : setType('text');
+    }
+    const toggleIcon = () => isPwdVisible ? <EyeSlashFill /> : <EyeFill />;
+
 
     let handleSubmit = (event) => {
         event.preventDefault();
@@ -30,6 +41,7 @@ const Signup = (props) => {
             .catch(err=> console.log(err));
     }
 
+
     return(
         <div>
         <div className="signUp" style={{borderRadius: "15px", padding: "20px"}}>
@@ -50,8 +62,10 @@ const Signup = (props) => {
                         <InputGroupAddon addonType="prepend">
                             <InputGroupText><LockFill /></InputGroupText>
                         </InputGroupAddon>
-                        <Input onChange={(e)=>setPassword(e.target.value)} type="password" minLength={'4'} name="password" placeholder="****" value={password} required/>
-                        <Eye/>
+                        <Input onChange={(e)=>setPassword(e.target.value)} type={type} minLength={'4'} name="password" placeholder="****" value={password} required />
+                        <InputGroupAddon addonType="append" >
+                            <InputGroupText ><span style={{cursor:'pointer'}} onClick={showPwd}>{toggleIcon()}</span></InputGroupText>
+                        </InputGroupAddon>
                     </InputGroup>
                 </FormGroup>
                 <div className="align-middle text-center">

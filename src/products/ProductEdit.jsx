@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import {Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter, FormText} from 'reactstrap';
 
 
 
@@ -14,6 +14,7 @@ const ProductEdit = (props) => {
     const [editPublish, setEditPublish] = useState(props.productToUpdate.adminDisplay);
 
     const [isChecked, setIsChecked] = useState(false);
+ 
 
     //to close modal form in case we change our mind
     const [modal, setModal] = useState(false);
@@ -27,8 +28,8 @@ const ProductEdit = (props) => {
     const [loading, setLoading] = useState(false);
 
     const uploadImage = async e => {
-        const files = e.target.files;
         const data = new FormData();
+        const files = e.target.files;
         data.append('file', files[0]);
         data.append('upload_preset', 'artisan-goods-cloudinary');
         setLoading(true);
@@ -88,6 +89,8 @@ const ProductEdit = (props) => {
         setRadioButton();
     }, [])
 
+
+
     return ( 
         <>
         <Modal isOpen={true} toggle={toggle}>
@@ -131,10 +134,10 @@ const ProductEdit = (props) => {
                 {/* START CLOUDINARY          */}
                 <FormGroup>
                     <Label htmlFor="photoURL">Upload image</Label>
-                    <Input type="file" placeholder="Upload a photo" onChange={uploadImage}/>
+                    <Input type="file" onChange={uploadImage} />
                     {loading ? <h6>Loading...</h6> : <img src={editPhotoURL} style={{width:   '150px'  }} style={{height:   '150px'  }} />} 
                 </FormGroup>  
-                {/* END CLOUDINARY          */}
+                    {/* END CLOUDINARY          */}
                 
                     
                 {/* <FormGroup check>

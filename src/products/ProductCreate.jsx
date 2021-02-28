@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import React, { useState, useEffect } from 'react';
+import {Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 
 const ProductCreate = (props) => {
 
     //used in case no picture set in the card
-    const photoNoAvail = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fvcunited.club%2Fno-image-available-2-jpg%2F&psig=AOvVaw3sJr6JBH3tKhVKKDVyWw8L&ust=1614528594709000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPDCzOy5iu8CFQAAAAAdAAAAABAI';
+    const photoNoAvail = 'https://vcunited.club/wp-content/uploads/2020/01/No-image-available-2.jpg';
 
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
@@ -19,8 +19,9 @@ const ProductCreate = (props) => {
     const [loading, setLoading] = useState(false);
 
     const uploadImage = async e => {
-        const files = e.target.files;
+
         const data = new FormData();
+        const files = e.target.files;
         data.append('file', files[0]);
         data.append('upload_preset', 'artisan-goods-cloudinary');
         setLoading(true);
@@ -43,7 +44,6 @@ const ProductCreate = (props) => {
 
     const handleSubmit = (e) => {
 
-        console.log('inStock', inStock);
         e.preventDefault();
         fetch("http://localhost:3000/product/create" , {
             method: 'POST',
@@ -69,7 +69,7 @@ const ProductCreate = (props) => {
             setPrice(0);
             setDescription('');
             setInStock(true);
-            setPhotoURL(photoNoAvail);
+            setPhotoURL('');
             setPublish(true);
             props.getListOfProducts();
 
@@ -82,7 +82,7 @@ const ProductCreate = (props) => {
         e.target.value === 'inStock' ? setInStock(true) : setInStock(false);
         console.log('e.target.value', e.target.value);
     }
-
+    
 
     return ( 
         <>
@@ -122,11 +122,12 @@ const ProductCreate = (props) => {
                 {/* START CLOUDINARY          */}
                 <FormGroup>
                     <Label htmlFor="photoURL">Upload image</Label>
-                    <Input type="file" placeholder="Upload a photo" onChange={uploadImage}/>
+                    <Input type="file" onChange={uploadImage} />
                     {loading ? <h6>Loading...</h6> : <img src={photoURL} style={{width:'150px'}} style={{height:'150px'}} /> } 
-                    </FormGroup>  
+                </FormGroup>  
                     {/* END CLOUDINARY          */}
                     
+
                 {/* <FormGroup check>
                     <Label htmlFor='publish' check>
                     <Input type="checkbox" value={publish} onChange={(e) => setPublish(e.target.value)} />{' '}
