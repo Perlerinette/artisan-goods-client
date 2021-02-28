@@ -14,47 +14,30 @@ const HomeGalleryParent = (props) => {
     const items = [
         {
             src: 'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhbmtldHMlMjBrbml0fGVufDB8fDB8&auto=format&fit=crop&w=1000&q=60',
-            altText: 'Slide 1',
-            caption: 'Slide 3',
-            header: 'Slide 3 Header',
-            key: '3',
+            altText: 'blanket slide',
             className: 'slide1'
         },
         {
             src: 'https://images.unsplash.com/photo-1532592068623-db1978e40df5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FuZGxlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60',
-            altText: 'Slide 1',
-            caption: 'Slide 3',
-            header: 'Slide 3 Header',
+            altText: 'Candles Slide',
             key: '3'
         },
     {
         src: "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
-        altText: 'Slide 1',
-        caption: 'Slide 1',
-        header: 'Slide 1 Header',
+        altText: 'Mender Slide',
         key: '1',
         className: 'items'
         
     },
     {
         src: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=3900&q=80',
-        altText: 'Slide 2',
-        caption: 'Slide 2',
-        header: 'Slide 2 Header',
+        altText: 'Wall Art Slide',
         key: '2'
     },
-    {
-        src: 'https://images.unsplash.com/photo-1578426720323-6d3b67133446?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1605&q=80',
-        altText: 'Slide 2',
-        caption: 'Slide 2',
-        header: 'Slide 2 Header',
-        key: '2'
-    },
+ 
     {
         src: 'https://images.unsplash.com/photo-1517722014278-c256a91a6fba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-        altText: 'Slide 2',
-        caption: 'Slide 2',
-        header: 'Slide 2 Header',
+        altText: 'Flowers Slide',
         key: '2'
     },
 
@@ -88,7 +71,7 @@ const HomeGalleryParent = (props) => {
         return(
             <>
             <br/>
-            <Row>
+            <Row className= "searchBar" style={{marginTop: 200}}>
                 <Col sm="4"></Col>
                 <Col sm="4">
                     <InputGroup>

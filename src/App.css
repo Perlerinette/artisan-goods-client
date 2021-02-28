@@ -1,6 +1,3 @@
-.pageBody {
-}
-
 .topDiv {
   background-color: #b0c4b1;
   color: white;
@@ -60,9 +57,8 @@
 .signUp {
   height: 400px;
   width: 300px;
-  background-color: #white;
+  background-color: #f7e1d7;
   color: black;
-  border: 1px solid black;
   position: relative;
   top: 70px;
   left: 200px;
@@ -75,8 +71,7 @@
 .login {
   height: 400px;
   width: 300px;
-  background-color: #white;
-  border: 1px solid black;
+  background-color: #f7e1d7;
   color: black;
   position: relative;
   top: 70px;
@@ -123,15 +118,6 @@
   fill: #b0c4b1;
 }
 
-.signUp {
-  height: 300px;
-  width: 300px;
-  background-color: #dedbd2;
-  position: relative;
-  top: 70px;
-  left: 200px;
-}
-
 .flexbox-container {
   display: flex;
   flex-direction: row;
@@ -142,4 +128,23 @@
 .modalCss {
   width: 700px !important;
   margin: auto;
+}
+
+/* .myShopCardBody {
+  background-color: rgb(243, 243, 243);
+  height: 500px;
+  width: 550px;
+  border: solid 3px #4a5759;
+}
+
+.myShopCard {
+  border-radius: 15px;
+} */
+
+.modal-title {
+  margin-left: auto;
+}
+
+.btn btn-primary {
+  margin-right: auto;
 }

@@ -24,7 +24,7 @@ const ProductView = (props) => {
             <div class="flexbox-container">
                 <div class="flexbox-item-1">
                   <Button
-                    style={{ backgroundColor: "lightGrey", marginRight: 5, width: 100 }}
+                    style={{ backgroundColor: "#b0c4b1", marginRight: 5, width: 100 }}
                     onClick={() => {
                       props.editUpdateProduct(product);
                       props.updateOn();
@@ -35,7 +35,7 @@ const ProductView = (props) => {
                 </div>
                 <div class="flexbox-item-2">
                   <Button
-                    style={{ backgroundColor: "grey", marginLeft: 5, width: 100}}
+                    style={{ backgroundColor: "#4a5759", marginLeft: 5, width: 100}}
                     onClick={() => {
                       deleteProduct(product);
                     }}
