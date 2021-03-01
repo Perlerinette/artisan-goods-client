@@ -96,7 +96,7 @@ const ProductEdit = (props) => {
         <Modal isOpen={true} toggle={toggle}>
              {/* <ModalHeader>Edit your product </ModalHeader> */}
              <Form onSubmit={productUpdate}>
-                <ModalHeader close={closeButton} toggle={toggle}> 
+                <ModalHeader style={{marginLeft: "auto"}} close={closeButton} toggle={toggle}> 
                     Edit your product 
                 </ModalHeader>
                 <ModalBody>
@@ -138,6 +138,31 @@ const ProductEdit = (props) => {
                     {loading ? <h6>Loading...</h6> : <img src={editPhotoURL} style={{width:   '150px'  }} style={{height:   '150px'  }} />} 
                 </FormGroup>  
                     {/* END CLOUDINARY          */}
+
+//         <Modal isOpen={true}>
+//              <ModalHeader style={{marginLeft: "auto"}}>Edit your product</ModalHeader>
+//              <ModalBody>
+//                 <Form onSubmit={productUpdate}> 
+//                      <FormGroup>
+//                          <Label htmlFor="name">Edit name</Label>
+//                          <Input name="name" value={editName} onChange={(e) => setEditName(e.target.value)}/>
+//                      </FormGroup>
+
+//                      <FormGroup>
+//                          <Label htmlFor="price">Edit price</Label>
+//                          <Input type="number" min="0" name='price' value={editPrice} onChange={(e) => setEditPrice(e.target.value)}/>
+//                      </FormGroup>
+//                      <FormGroup>
+//                          <Label htmlFor="description">Edit description</Label>
+//                          <Input type="textarea" name="description" value={editDescription} onChange={(e) => setEditDescription(e.target.value)}/>
+//                      </FormGroup>
+//             {/* START CLOUDINARY          */}
+//             <FormGroup>
+//             <Label htmlFor="photoURL">Upload image</Label>
+//             <Input 
+//                 type="file"
+//                 placeholder="Upload a photo"
+//                 onChange={uploadImage}
                 
                     
                 {/* <FormGroup check>
@@ -157,4 +182,4 @@ const ProductEdit = (props) => {
      );
 }
  
-export default ProductEdit;
+export default ProductEdit;     

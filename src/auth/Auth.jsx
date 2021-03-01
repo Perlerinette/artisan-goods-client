@@ -10,6 +10,7 @@ const Auth = (props) => {
 
 
     return(
+
         <Container className = "auth-container align-middle"  >
             {/* <Row >
                 <Col md="6" >
