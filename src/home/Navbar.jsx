@@ -9,6 +9,8 @@ import {
   Button,
 } from "reactstrap";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 const Sitebar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,10 +22,12 @@ const Sitebar = (props) => {
 
   return (
     <>
+    {/* <div className="topPinkDiv"> </div> */}
       <div className="topDiv">
-        <h3 style={{ fontSize: "17px" }}>
-          Spend over $75 and get FREE SHIPPING!
-        </h3>
+
+      
+      
+
       </div>
       <Navbar light expand="md">
         <NavbarBrand>
@@ -31,8 +35,8 @@ const Sitebar = (props) => {
             <img
               src="https://i.pinimg.com/564x/57/c7/18/57c71821fd32b00caf33820cc81cc2de.jpg"
               alt=""
-              width="90"
-              height="90"
+              width="150"
+              height="150"
             />
           </a>
           Artisan Goods

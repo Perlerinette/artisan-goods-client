@@ -42,8 +42,8 @@ const Signup = (props) => {
                     <Label htmlFor="password">Password</Label>
                     <Input onChange={(e)=>setPassword(e.target.value)} type="password" minLength={'4'} name="password" placeholder="Password" value={password} required />
                 </FormGroup>
-                <div className="align-middle text-center">
-                <Button className="submitBtn" type="submit">Signup</Button>
+                <div className="align-middle text-center" style={{padding: 50}} >
+                <Button style={{width: 100, backgroundColor: "#4a5759", color: "white"}} className="submitBtn" type="submit">Signup</Button>
                 </div>
             </Form>
         </div>
