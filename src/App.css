@@ -137,6 +137,23 @@
   margin: auto;
 }
 
+.signUp {
+  height: 300px;
+  width: 320px;
+  background-color: #dedbd2;
+  /* position: relative; */
+  /* top: 70px;
+  left: 200px; */
+}
+
+.login {
+  height: 300px;
+  width: 320px;
+  background-color: #dedbd2;
+  /* position: relative; */
+  /* top: 70px;
+  left: 30px; */
+
 /* .myShopCardBody {
   background-color: rgb(243, 243, 243);
   height: 500px;
@@ -150,6 +167,7 @@
 
 .modal-title {
   margin-left: auto;
+
 }
 
 .btn btn-primary {

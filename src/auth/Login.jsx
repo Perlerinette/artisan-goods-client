@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import {Form, FormGroup, Label, Input, Button, InputGroup, InputGroupAddon, InputGroupText} from 'reactstrap';
+import { LockFill, PersonFill, EyeFill, EyeSlashFill } from 'react-bootstrap-icons';
 import {useHistory} from 'react-router-dom';
 
 const Login = (props) => {
@@ -7,6 +8,16 @@ const Login = (props) => {
     const [email, setEmail] = useState ('');
     const [password, setPassword] = useState('');
     const history = useHistory();
+
+    // show/hide password
+    const [type, setType] = useState('password');
+    const [isPwdVisible, setIsPwdVisible] = useState(false);
+    const showPwd = () => {
+        setIsPwdVisible(!isPwdVisible);
+        isPwdVisible ? setType('password') : setType('text');
+    }
+    const toggleIcon = () => isPwdVisible ? <EyeSlashFill /> : <EyeFill />;
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -33,22 +44,37 @@ const Login = (props) => {
             
           }
 
+
     return(
     
         <div className="login" style={{borderRadius: "15px", padding: "20px"}} >
             <h1 style={{textAlign: "center"}}>Login</h1>
             <Form onSubmit={handleSubmit}>
-            <FormGroup>
-                    <Label htmlFor="email">Email</Label>
+              <FormGroup>
+                  <Label htmlFor="email">Email</Label>
+                  <InputGroup>
+                    <InputGroupAddon addonType="prepend">
+                        <InputGroupText><PersonFill /></InputGroupText>
+                    </InputGroupAddon>
                     <Input onChange={(e)=>setEmail(e.target.value)} type="email" name="email" placeholder="Email" value={email} required />
-                </FormGroup>
-                <FormGroup>
-                    <Label htmlFor="password">Password</Label>
-                    <Input onChange={(e)=>setPassword(e.target.value)} type="password" minLength={'4'} name="password" placeholder="Password" value={password} required/>
-                </FormGroup>
-                <div className="align-middle text-center" style={{padding: 50}}>
-                <Button  style={{width: 100, backgroundColor: "#4a5759",color: "white"}} type="submit" >Login</Button>
-                </div>
+                  </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                  <Label htmlFor="password">Password</Label>
+                  <InputGroup>
+                    <InputGroupAddon addonType="prepend">
+                        <InputGroupText><LockFill /></InputGroupText>
+                    </InputGroupAddon>
+                    <Input onChange={(e)=>setPassword(e.target.value)} type={type} minLength={'4'} name="password" placeholder="****" value={password} required />
+                    <InputGroupAddon addonType="append" >
+                            <InputGroupText ><span style={{cursor:'pointer'}} onClick={showPwd}>{toggleIcon()}</span></InputGroupText>
+                    </InputGroupAddon>
+                  </InputGroup>
+              </FormGroup>
+
+              <div className="align-middle text-center">
+              <Button  type="submit">Login</Button>
+              </div>
             </Form>
         </div>
         
