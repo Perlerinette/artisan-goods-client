@@ -36,7 +36,7 @@ const HomeGalleryChild = (props) => {
         </CardBody>
       </Card>
       <Modal isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader style={{backgroundColor: "#f7e1d7"}} toggle={toggle}>{props.productItem.name}</ModalHeader>
+        <ModalHeader  toggle={toggle}>{props.productItem.name}</ModalHeader>
         
         <ModalBody style={{textAlign: "center"}}>
           <img style={{ width:350, height:270}}src={props.productItem.photoURL}></img>

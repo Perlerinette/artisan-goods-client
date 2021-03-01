@@ -85,7 +85,7 @@ const [loading, setLoading] = useState(false)
     return ( 
         <>
         <Modal isOpen={true}>
-             <ModalHeader>Edit your product</ModalHeader>
+             <ModalHeader style={{marginLeft: "auto"}}>Edit your product</ModalHeader>
              <ModalBody>
                 <Form onSubmit={productUpdate}> 
                      <FormGroup>
