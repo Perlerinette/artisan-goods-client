@@ -9,8 +9,6 @@ import {
   Button,
 } from "reactstrap";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 const Sitebar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
