@@ -43,7 +43,7 @@ const Signup = (props) => {
                     <Input onChange={(e)=>setPassword(e.target.value)} type="password" minLength={'4'} name="password" placeholder="Password" value={password} required />
                 </FormGroup>
                 <div className="align-middle text-center" style={{padding: 50}} >
-                <Button style={{width: 100, color: "white"}} className="submitBtn" type="submit">Signup</Button>
+                <Button style={{width: 100, backgroundColor: "#4a5759", color: "white"}} className="submitBtn" type="submit">Signup</Button>
                 </div>
             </Form>
         </div>

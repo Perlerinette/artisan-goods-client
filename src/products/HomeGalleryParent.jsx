@@ -99,7 +99,7 @@ const HomeGalleryParent = (props) => {
   <>
         <UncontrolledCarousel className="Carousel" items={items} />
              {searchByKeyword()}
-        <CardDeck style={{justifyContent: 'center', padding: 60, marginBottom: 20}}>
+        <CardDeck style={{justifyContent: 'center', padding: 60, width: "auto" , marginBottom: 20}}>
             {displayCards()}
         </CardDeck>
       

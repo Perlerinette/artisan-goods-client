@@ -10,7 +10,7 @@ const HomeGalleryChild = (props) => {
 
     return ( 
       <div>
-        <Card className="myShopCard" style={{width: 550,  height: 450, marginLeft: "16%", backgroundColor: "#F1F1EF"}}>
+        <Card className="myShopCard" style={{width: 550,  height: 450, marginLeft: "16%", backgroundColor: "#f5f5f5"}}>
         <CardBody style={{}}>
           <CardImg src={props.productItem.photoURL} alt="card image" style={{width:   '175px'  }} /> 
           <CardTitle tag="h5">{props.productItem.name}</CardTitle>
