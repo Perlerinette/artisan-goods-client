@@ -29,7 +29,7 @@
 
 .NavbarBrand {
   position: relative;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Satisfy", cursive;
 }
 
 .logo {
@@ -159,4 +159,17 @@
 .bottomPinkDiv {
   background-color: #f7e1d7;
   height: 50px;
+}
+
+/* #myShopHeader {
+  font-family: "Satisfy", cursive;
+  font-size: 50px;
+  letter-spacing: 1px;
+  font-style: italic;
+} */
+
+#featuredProducts {
+  font-family: "Satisfy", cursive;
+  text-align: center;
+  padding: 30px;
 }

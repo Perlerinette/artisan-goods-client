@@ -55,7 +55,7 @@ const ProductView = (props) => {
 
   return (
     <>
-      <h3>My shop</h3>
+      <h3 id="myShopHeader">My shop</h3>
       <br />
       <Table>
         <tbody>
