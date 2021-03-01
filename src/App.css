@@ -60,28 +60,8 @@
   height: 440px;
 }
 
-.signUp {
-  height: 400px;
-  width: 300px;
-  background-color: #e1e2e3;
-  color: black;
-  position: relative;
-  top: 70px;
-  left: 200px;
-}
-
 .container {
   justify-content: center;
-}
-
-.login {
-  height: 400px;
-  width: 300px;
-  background-color: #e1e2e3;
-  color: black;
-  position: relative;
-  top: 70px;
-  left: 30px;
 }
 
 .auth-container {
@@ -140,7 +120,8 @@
 .signUp {
   height: 300px;
   width: 320px;
-  background-color: #dedbd2;
+  background-color: #e1e2e3;
+  color: black;
   /* position: relative; */
   /* top: 70px;
   left: 200px; */
@@ -149,7 +130,8 @@
 .login {
   height: 300px;
   width: 320px;
-  background-color: #dedbd2;
+  background-color: #e1e2e3;
+  color: black;
   /* position: relative; */
   /* top: 70px;
   left: 30px; */

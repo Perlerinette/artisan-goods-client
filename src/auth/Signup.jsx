@@ -68,8 +68,8 @@ const Signup = (props) => {
                         </InputGroupAddon>
                     </InputGroup>
                 </FormGroup>
-                <div className="align-middle text-center" style={{padding: 50}} >
-                <Button style={{width: 100, backgroundColor: "#4a5759", color: "white"}} className="submitBtn" type="submit">Signup</Button>
+                <div className="align-middle text-center" >
+                <Button className="submitBtn" type="submit">Signup</Button>
                 </div>
             </Form>
         </div>
