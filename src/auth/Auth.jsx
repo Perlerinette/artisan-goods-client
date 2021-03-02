@@ -39,8 +39,8 @@ const Auth = (props) => {
                         <Signup updateToken={props.updateToken} setUserEmail={props.setUserEmail}/> }
             </Row>
             <Row className='justify-content-md-center' >
-                {displayLogin ? <a style={{cursor:'pointer'}} onClick={toggle} >New here? Register.</a> : 
-                <a  style={{cursor:'pointer', fontSize: 20}} onClick={toggle}>Already have an account? Log in.</a>}
+                {displayLogin ? <a style={{cursor:'pointer', fontSize: 22, padding: 5}} onClick={toggle} >New here? Register.</a> : 
+                <a  style={{cursor:'pointer', fontSize: 22, padding: 5}} onClick={toggle}>Already have an account? Log in.</a>}
             </Row>
             
         </Container>

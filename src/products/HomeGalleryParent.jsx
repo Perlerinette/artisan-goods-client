@@ -3,6 +3,7 @@ import HomeGalleryChild from './HomeGalleryChild';
 import {CardDeck, UncontrolledCarousel, Col, Row, Input, InputGroup, InputGroupAddon, InputGroupText,} from 'reactstrap';
 import { Search } from 'react-bootstrap-icons';
 import SilkFlowers from "./assets/silkFlowers.jpeg";
+import WallArt from "./assets/wallArt.jpg";
 
 
 
@@ -35,7 +36,7 @@ const HomeGalleryParent = (props) => {
         
     },
     {
-        src: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=3900&q=80',
+        src: WallArt,
         altText: 'Wall Art Slide',
         key: '2'
     },

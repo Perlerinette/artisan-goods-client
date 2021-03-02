@@ -23,8 +23,8 @@ const HomeGalleryChild = (props) => {
     return ( 
      
       <div className="Cards">
-      <Card className="CardCss" style={{textAlign: "center" , width: '350px', height: "450px", padding: "0px", marginBottom: 20, boxShadow: " lightGrey 2px 2px"}}>
-        <CardImg  src={props.productItem.photoURL}  width="350" height="270"  alt="Card image" />
+      <Card className="CardCss" style={{textAlign: "center" , width: '300px', height: "400px", padding: "0px", marginBottom: 20, boxShadow: " lightGrey 2px 2px"}}>
+        <CardImg  src={props.productItem.photoURL}  width="300" height="210"  alt="Card image" />
 
         <CardBody className="CardBody" style = {{background: "white"}} >
           <CardTitle tag="h5" style={{fontSize: 17}}>{props.productItem.name}</CardTitle>
