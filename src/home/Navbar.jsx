@@ -9,11 +9,9 @@ import {
   Button,
 } from "reactstrap";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import ReactDOM from 'react-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
-const element = <FontAwesomeIcon icon={faCoffee} />
+
+
 
 
 
@@ -27,13 +25,8 @@ const Sitebar = (props) => {
 
   return (
     <>
-    {/* <div className="topPinkDiv"> </div> */}
       <div className="topDiv">
-      <FontAwesomeIcon icon={["fal", "coffee"]} />
-
-      <i style={{color: "black", height: "100px"}} class="fab fa-facebook-f"></i>
-      
-
+  
       </div>
       <Navbar light expand="md">
         <NavbarBrand>
@@ -41,8 +34,8 @@ const Sitebar = (props) => {
             <img
               src="https://i.pinimg.com/564x/57/c7/18/57c71821fd32b00caf33820cc81cc2de.jpg"
               alt=""
-              width="150"
-              height="150"
+              width="90"
+              height="90"
             />
           </a>
           Artisan Goods
