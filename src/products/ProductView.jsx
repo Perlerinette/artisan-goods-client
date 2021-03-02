@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Table, Button } from "reactstrap";
+import { Table, Button} from "reactstrap";
 import MyPageCards from "./MyPageCards";
 
 const ProductView = (props) => {
@@ -15,9 +15,11 @@ const ProductView = (props) => {
     });
   };
 
+
   const productListMapper = () => {
     return props.productList.map((product, index) => {
       return (
+        <>
         <tr key={index}>
           <td>
             <MyPageCards productItem={product} />
@@ -43,12 +45,10 @@ const ProductView = (props) => {
                     Delete
                   </Button>
                 </div>
-              </div>
-            <td>
-              
-            </td>
+            </div>
           </td>
         </tr>
+        </>
       );
     });
   };

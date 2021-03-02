@@ -3,9 +3,6 @@ import {Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 
 const ProductCreate = (props) => {
 
-    //used in case no picture set in the card
-    const photoNoAvail = 'https://vcunited.club/wp-content/uploads/2020/01/No-image-available-2.jpg';
-
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
     const [description, setDescription] = useState('');
@@ -83,6 +80,9 @@ const ProductCreate = (props) => {
         console.log('e.target.value', e.target.value);
     }
     
+    function deleteImg(){
+        setPhotoURL('');
+    }
 
     return ( 
         <>
@@ -124,6 +124,8 @@ const ProductCreate = (props) => {
                     <Label htmlFor="photoURL">Upload image</Label>
                     <Input type="file" onChange={uploadImage} />
                     {loading ? <h6>Loading...</h6> : <img src={photoURL} style={{width:'150px'}} style={{height:'150px'}} /> } 
+                    <br/>
+                    <Button size= 'sm' color='outline-danger' disabled={loading || photoURL===''} onClick={deleteImg} >Delete image</Button>
                 </FormGroup>  
                     {/* END CLOUDINARY          */}
                     
