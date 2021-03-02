@@ -86,7 +86,7 @@ const ProductCreate = (props) => {
 
     return ( 
         <>
-            <h4 style={{fontSize: 30, textAlign: "center"}}>Have a new item for sale?</h4>
+            <h4 id="productCreateFont" style={{fontSize: 40, textAlign: "center"}}>Have a new item for sale?</h4>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor="name">Name</Label>
@@ -138,7 +138,7 @@ const ProductCreate = (props) => {
                 </FormGroup> */}
                 <br />
                 <div className='align-middle text-center'>
-                <Button  style={{width: 120, backgroundColor: "lightGrey", color: "black"}} disabled={loading} type="submit">List it!</Button>
+                <Button  style={{width: 120, backgroundColor: "#f5f5f5", color: "black"}} disabled={loading} type="submit">List it!</Button>
                 </div>
             </Form>
         </>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import React from 'react';
-import { Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody, Row, Col} from 'reactstrap';
+import { Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody, Row, Col, CardHeader} from 'reactstrap';
 
 
 
@@ -17,7 +17,7 @@ const MyPageCards = (props) => {
   return ( 
     <div>
       <Card className="myShopCard" style={{width: 550,  height: 450, marginLeft: "16%", backgroundColor: "#f5f5f5"}}>
-        <CardBody style={{}}>
+        <CardBody >
           <CardImg src={props.productItem.photoURL} alt="card image" style={{width:   '175px'  }} onError = {errorHandling} /> 
           <CardTitle tag="h5">{props.productItem.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>

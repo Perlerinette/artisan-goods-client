@@ -2,11 +2,6 @@ import { useEffect, useState } from "react";
 import React from 'react';
 import { withRouter } from "react-router-dom";
 import { Card, Button, CardImg, CardTitle, CardText, CardSubtitle, CardBody, Row, Col,  Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-// import Modal from "react-modal";
-
-
-
-
 
 
 const HomeGalleryChild = (props) => {
@@ -52,13 +47,14 @@ const HomeGalleryChild = (props) => {
             {props.productItem.description}{' '}
           </CardText>
         </ModalBody>
-        <ModalFooter style={{backgroundColor: "#f7e1d7"}}>
-          <Button style={{backgroundColor: "#4a5759", color: "white", width: 150, height: 40, textAlign: "center", marginRight: "auto", marginLeft: "auto"}}  color="primary" onClick={toggle}>Close</Button>{' '}
+        <ModalFooter style={{backgroundColor: "#f7e1d7", marginLeft: 0, marginRight: 0}}>
+          <Button style={{backgroundColor: "#4a5759", color: "white", width: 150, height: 40, textAlign: "center", marginLeft: "auto", marginRight: "auto"}}  onClick={toggle}>Close</Button>{' '}
         </ModalFooter>
       </Modal>
-        
-      </div>
-        
+     
+
+        </div>
+
       );
     };
 
