@@ -1,3 +1,4 @@
+import logo from '../assets/AG-LOGO.gif';
 import React, { useState } from "react";
 import {
   Navbar,
@@ -29,10 +30,11 @@ const Sitebar = (props) => {
         <NavbarBrand>
           <a class="logo" href="#">
             <img
-              src="https://i.pinimg.com/564x/57/c7/18/57c71821fd32b00caf33820cc81cc2de.jpg"
+              src={logo}
+              // style={ {paddingTop: "35px"}}
               alt=""
-              width="90"
-              height="90"
+              width="100"
+              height="100"
             />
           </a>
           Artisan Goods
