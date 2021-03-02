@@ -10,6 +10,7 @@ import {
 } from "reactstrap";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
+
 const Sitebar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,12 +21,8 @@ const Sitebar = (props) => {
 
   return (
     <>
-    {/* <div className="topPinkDiv"> </div> */}
       <div className="topDiv">
-
-      
-      
-
+  
       </div>
       <Navbar light expand="md">
         <NavbarBrand>
@@ -33,8 +30,8 @@ const Sitebar = (props) => {
             <img
               src="https://i.pinimg.com/564x/57/c7/18/57c71821fd32b00caf33820cc81cc2de.jpg"
               alt=""
-              width="150"
-              height="150"
+              width="90"
+              height="90"
             />
           </a>
           Artisan Goods
