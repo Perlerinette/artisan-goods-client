@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import HomeGalleryChild from './HomeGalleryChild';
 import {CardDeck, UncontrolledCarousel, Col, Row, Input, InputGroup, InputGroupAddon, InputGroupText,} from 'reactstrap';
 import { Search } from 'react-bootstrap-icons';
+import SilkBouquets from "./assets/silkBouquets.jpeg";
+
 
 
 
@@ -10,6 +12,8 @@ const HomeGalleryParent = (props) => {
     const [products, setProducts] = useState([]);
     const [searchBox, setSearchBox] = useState('');
 
+
+   
     
   
     const items = [
@@ -37,7 +41,7 @@ const HomeGalleryParent = (props) => {
     },
  
     {
-        src: 'https://images.unsplash.com/photo-1517722014278-c256a91a6fba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+        src: {SilkBouquets},
         altText: 'Flowers Slide',
         key: '2'
     },
@@ -103,9 +107,16 @@ const HomeGalleryParent = (props) => {
     return (     
         <>
         <UncontrolledCarousel className="Carousel" items={items} />
+       
+        {/* <div class="custom-shape-divider-top-1614696370">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+    </svg>
+</div> */}
         <h1 id="featuredProducts">featured products</h1>
              {searchByKeyword()}
-        <CardDeck style={{justifyContent: 'center', padding: 60, width: "auto" , marginBottom: 20}}>
+            
+        <CardDeck className="cardDeckCss" style={{justifyContent: 'center', width: "auto" , marginBottom: 20}}>
             {displayCards()}
         </CardDeck>
       

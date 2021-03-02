@@ -16,9 +16,10 @@ const Footer = () => {
       
         <div className="footer" style={{backgroundColor: '#b0c4b1', height: "200px", width: "auto"}}>
        
-        <div className='footer-copyright text-center ml-auto py-3'>  
-            &copy; {theDate} - Inception Team - Blue Badge      
+       
         </div>
+        <div style={{backgroundColor: '#b0c4b1'}}className='footer-copyright text-center ml-auto py-3'>  
+            &copy; {theDate} - Inception Team - Blue Badge      
         </div>
         {/* </div> */}
       </>

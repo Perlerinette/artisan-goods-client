@@ -73,7 +73,7 @@ const Login = (props) => {
               </FormGroup>
 
               <div className="align-middle text-center">
-              <Button  type="submit">Login</Button>
+              <Button className="submitBtn" type="submit">Login</Button>
               </div>
             </Form>
         </div>

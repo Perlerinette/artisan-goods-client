@@ -136,7 +136,7 @@ const ProductCreate = (props) => {
                 </FormGroup> */}
                 <br />
                 <div className='align-middle text-center'>
-                <Button  style={{width: 120, backgroundColor: "lightGrey", color: "black"}} disabled={loading} type="submit">List it!</Button>
+                <Button  style={{width: 120, backgroundColor: "#f5f5f5", color: "black"}} disabled={loading} type="submit">List it!</Button>
                 </div>
             </Form>
         </>

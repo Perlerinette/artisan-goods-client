@@ -9,8 +9,13 @@ import {
   Button,
 } from "reactstrap";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+const element = <FontAwesomeIcon icon={faCoffee} />
+
+
 
 const Sitebar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,8 +29,9 @@ const Sitebar = (props) => {
     <>
     {/* <div className="topPinkDiv"> </div> */}
       <div className="topDiv">
+      <FontAwesomeIcon icon={["fal", "coffee"]} />
 
-      
+      <i style={{color: "black", height: "100px"}} class="fab fa-facebook-f"></i>
       
 
       </div>
