@@ -182,16 +182,6 @@
   bottom: 170px;
 }
 
-.blobsDiv {
-  height: 100px;
-}
-
-.greenBlobs {
-  height: 400px;
-  width: 400px;
-  rotate: 20%;
-}
-
 .submitBtn {
   margin-top: 50px;
 }
@@ -235,9 +225,7 @@
 .socialMediaIcons {
   margin-left: 0%;
   margin-right: 0%;
-  padding: 50px;
   position: relative;
-  top: 00px;
   justify-content: center;
   display: flex;
   flex-direction: row;
@@ -278,4 +266,26 @@
   position: relative;
   z-index: 100;
   bottom: 400px;
+}
+
+#loginFont {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1px;
+}
+
+#signupFont {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1px;
+}
+
+#productCreateFont {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1px;
+}
+
+#socialMediaFooter {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 20px;
 }

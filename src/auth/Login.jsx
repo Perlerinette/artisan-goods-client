@@ -48,7 +48,7 @@ const Login = (props) => {
     return(
     
         <div className="login" style={{borderRadius: "15px", padding: "20px"}} >
-            <h1 style={{textAlign: "center"}}>Login</h1>
+            <h1 id="loginFont" style={{textAlign: "center"}}>Login</h1>
             <Form onSubmit={handleSubmit}>
               <FormGroup>
                   <Label htmlFor="email">Email</Label>

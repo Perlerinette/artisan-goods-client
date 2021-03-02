@@ -86,7 +86,7 @@ const ProductCreate = (props) => {
 
     return ( 
         <>
-            <h4 style={{fontSize: 30, textAlign: "center"}}>Have a new item for sale?</h4>
+            <h4 id="productCreateFont" style={{fontSize: 40, textAlign: "center"}}>Have a new item for sale?</h4>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor="name">Name</Label>

@@ -12,6 +12,8 @@ const Footer = () => {
       
         <div className="footer" style={{backgroundColor: '#b0c4b1', height: "250px", width: "auto", position: "relative", bottom: 100}}>
         
+        <h1 id="socialMediaFooter">Like what you see? Follow Us!</h1>
+        
        <div className="socialMediaIcons">
            
            <div className="icon">
@@ -35,7 +37,7 @@ const Footer = () => {
         <div style={{backgroundColor: '#b0c4b1', position: "relative", bottom: 100, marginBottom: "0%"}}className='footer-copyright text-center ml-auto py-3'>  
             &copy; {theDate} - Inception Team - Blue Badge      
         </div>
-        {/* </div> */}
+       
       </>
     );
 };

@@ -4,6 +4,8 @@ import {CardDeck, UncontrolledCarousel, Col, Row, Input, InputGroup, InputGroupA
 import { Search } from 'react-bootstrap-icons';
 import SilkFlowers from "./assets/silkFlowers.jpeg";
 import WallArt from "./assets/wallArt.jpg";
+import TableSetting from "./assets/tableSetting.jpeg";
+import Candle from "./assets/candle.jpeg";
 
 
 
@@ -19,12 +21,12 @@ const HomeGalleryParent = (props) => {
   
     const items = [
         {
-            src: 'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhbmtldHMlMjBrbml0fGVufDB8fDB8&auto=format&fit=crop&w=1000&q=60',
+            src: TableSetting,
             altText: 'blanket slide',
             className: 'slide1'
         },
         {
-            src: 'https://images.unsplash.com/photo-1532592068623-db1978e40df5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FuZGxlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60',
+            src: Candle,
             altText: 'Candles Slide',
             key: '3'
         },
@@ -35,11 +37,11 @@ const HomeGalleryParent = (props) => {
         className: 'items'
         
     },
-    {
-        src: WallArt,
-        altText: 'Wall Art Slide',
-        key: '2'
-    },
+    // {
+    //     src: WallArt,
+    //     altText: 'Wall Art Slide',
+    //     key: '2'
+    // },
  
     {
         src: SilkFlowers,
@@ -109,11 +111,7 @@ const HomeGalleryParent = (props) => {
         <>
         <UncontrolledCarousel className="Carousel" items={items} />
        
-        {/* <div class="custom-shape-divider-top-1614696370">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
-    </svg>
-</div> */}
+       
 <div className="gradientDiv">
     
 </div>
