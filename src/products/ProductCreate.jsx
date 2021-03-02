@@ -9,7 +9,7 @@ const ProductCreate = (props) => {
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
     const [description, setDescription] = useState('');
-    const [photoURL, setPhotoURL] = useState(photoNoAvail);
+    const [photoURL, setPhotoURL] = useState('');
     const [inStock,setInStock] = useState(true);
     const [publish, setPublish] = useState(true);
 
