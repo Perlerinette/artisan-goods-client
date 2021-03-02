@@ -1,3 +1,4 @@
+import logo from '../assets/AG-LOGO.gif';
 import React, { useState } from "react";
 import {
   Navbar,
