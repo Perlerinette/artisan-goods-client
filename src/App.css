@@ -23,8 +23,21 @@
   fill: black;
 }
 
+.navbarCss {
+  background-color: #b0c4b1;
+  height: 200px;
+}
+
+.navbarCss navbar navbar-expand-md navbar-light {
+  height: 200px;
+}
+
 .navbar {
-  height: 190px;
+  height: 40px;
+}
+
+.nav-item {
+  text-align: center;
 }
 
 .NavbarBrand {
@@ -289,4 +302,37 @@
   letter-spacing: 1px;
   text-align: center;
   padding: 20px;
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: black;
+}
+
+.social-container {
+  padding: 25px 50px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+  color: rgb(248, 229, 220);
 }
