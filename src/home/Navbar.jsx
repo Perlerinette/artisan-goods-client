@@ -1,3 +1,5 @@
+
+import logo from '../assets/AG-LOGO.gif';
 import React, { useState } from "react";
 import {
   Navbar,
@@ -19,23 +21,23 @@ const Sitebar = (props) => {
     setIsOpen(newIsOpen);
   };
 
+
+  // Hover effect on buttons
+  function changeLink(e) {
+    // e.target.style.fontWeight = 'bold';
+    e.target.style.color = '#f7e1d7';
+  }
+
+  function resetLink(e) {
+    // e.target.style.fontWeight = 'normal';
+    e.target.style.color = 'black';
+  }
+
   return (
-    <>
-      <div className="topDiv">
-  
-      </div>
-      <Navbar light expand="md">
-        <NavbarBrand>
-          <a class="logo" href="#">
-            <img
-              src="https://i.pinimg.com/564x/57/c7/18/57c71821fd32b00caf33820cc81cc2de.jpg"
-              alt=""
-              width="90"
-              height="90"
-            />
-          </a>
-          Artisan Goods
-        </NavbarBrand>
+    
+      // <div className="topDiv">
+      <div className='center'>
+      <Navbar className="navbarCss" dark expand="md">
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
@@ -65,7 +67,8 @@ const Sitebar = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
-    </>
+      </div>
+    
   );
 };
 
