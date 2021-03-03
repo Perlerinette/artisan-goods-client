@@ -15,6 +15,15 @@ const ProductView = (props) => {
     });
   };
 
+  function changeBtn(e) {
+    // e.target.style.fontSize = 'larger';
+    e.target.style.fontStyle = 'italic';
+  }
+
+  function resetBtn(e) {
+    // e.target.style.fontSize = 'initial';
+    e.target.style.fontStyle = 'initial';
+  }
 
   const productListMapper = () => {
     return props.productList.map((product, index) => {
@@ -27,6 +36,7 @@ const ProductView = (props) => {
                 <div class="flexbox-item-1">
                   <Button
                     style={{ backgroundColor: "#b0c4b1", marginRight: 5, width: 100 }}
+                    onMouseOver={changeBtn} onMouseLeave={resetBtn}
                     onClick={() => {
                       props.editUpdateProduct(product);
                       props.updateOn();
@@ -38,6 +48,7 @@ const ProductView = (props) => {
                 <div class="flexbox-item-2">
                   <Button
                     style={{ backgroundColor: "#4a5759", marginLeft: 5, width: 100}}
+                    onMouseOver={changeBtn} onMouseLeave={resetBtn}
                     onClick={() => {
                       deleteProduct(product);
                     }}

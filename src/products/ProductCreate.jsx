@@ -84,6 +84,14 @@ const ProductCreate = (props) => {
         setPhotoURL('');
     }
 
+    function changeBtn(e) {
+    e.target.style.fontSize = 'larger';
+    }
+
+    function resetBtn(e) {
+    e.target.style.fontSize = 'initial';
+    }
+
     return ( 
         <>
             <h4 id="productCreateFont" style={{fontSize: 40, textAlign: "center"}}>Have a new item for sale?</h4>
@@ -123,7 +131,7 @@ const ProductCreate = (props) => {
                 <FormGroup>
                     <Label htmlFor="photoURL">Upload image</Label>
                     <Input type="file" onChange={uploadImage} />
-                    {loading ? <h6>Loading...</h6> : <img src={photoURL} style={{width:'150px'}} style={{height:'150px'}} /> } 
+                    {loading ? <h6>Loading...</h6> : <img src={photoURL} style={{width:'120px'}} style={{height:'120px'}} /> } 
                     <br/>
                     <Button size= 'sm' color='outline-danger' disabled={loading || photoURL===''} onClick={deleteImg} >Delete image</Button>
                 </FormGroup>  
@@ -138,7 +146,7 @@ const ProductCreate = (props) => {
                 </FormGroup> */}
                 <br />
                 <div className='align-middle text-center'>
-                <Button  style={{width: 120, backgroundColor: "#f5f5f5", color: "black"}} disabled={loading} type="submit">List it!</Button>
+                <Button  style={{width: 120, backgroundColor: "#f5f5f5", color: "black"}} disabled={loading} onMouseOver={changeBtn} onMouseLeave={resetBtn} type="submit">List it!</Button>
                 </div>
             </Form>
         </>

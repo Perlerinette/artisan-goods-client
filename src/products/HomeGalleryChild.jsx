@@ -20,6 +20,15 @@ const HomeGalleryChild = (props) => {
     ev.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg';
   }
 
+  function changeBtn(e) {
+    e.target.style.fontSize = 'larger';
+  }
+
+  function resetBtn(e) {
+    e.target.style.fontSize = 'initial';
+  }
+
+
     return ( 
      
       <div className="Cards">
@@ -31,7 +40,7 @@ const HomeGalleryChild = (props) => {
           <CardText>
             {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
           </CardText>
-          <Button style={{background: "#4A5759"}} onClick={toggle}>{buttonLabel}See Full Description</Button> 
+          <Button style={{background: "#4A5759"}} onMouseOver={changeBtn} onMouseLeave={resetBtn} onClick={toggle}>{buttonLabel}See Full Description</Button> 
         </CardBody>
       </Card>
 
@@ -48,7 +57,7 @@ const HomeGalleryChild = (props) => {
           </CardText>
         </ModalBody>
         <ModalFooter style={{backgroundColor: "#f7e1d7", marginLeft: 0, marginRight: 0}}>
-          <Button style={{backgroundColor: "#4a5759", color: "white", width: 150, height: 40, textAlign: "center", marginLeft: "auto", marginRight: "auto"}}  onClick={toggle}>Close</Button>{' '}
+          <Button style={{backgroundColor: "#4a5759", color: "white", width: 150, height: 40, textAlign: "center", marginLeft: "auto", marginRight: "auto"}} onMouseOver={changeBtn} onMouseLeave={resetBtn} onClick={toggle}>Close</Button>{' '}
         </ModalFooter>
       </Modal>
      
