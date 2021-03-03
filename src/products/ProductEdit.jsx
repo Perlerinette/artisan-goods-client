@@ -19,7 +19,16 @@ const ProductEdit = (props) => {
     //to close modal form in case we change our mind
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
-    const closeButton = <button className="close" onClick={toggle}>&times;</button>;
+    const closeButton = <button className="close" onMouseOver={changeBtn} onMouseLeave={resetBtn} onClick={toggle}>&times;</button>;
+
+    // Hover effect on buttons
+    function changeBtn(e) {
+    e.target.style.fontSize = 'larger';
+    }
+
+    function resetBtn(e) {
+    e.target.style.fontSize = 'initial';
+    }
 
 
     /* **********
@@ -151,7 +160,7 @@ const ProductEdit = (props) => {
                                     
             </ModalBody>
             <ModalFooter style={{justifyContent: 'center', backgroundColor: "#f7e1d7"}}>
-                <Button disabled={loading} onClick={toggle} type="submit">Update!</Button>
+                <Button disabled={loading} onMouseOver={changeBtn} onMouseLeave={resetBtn} onClick={toggle} type="submit">Update!</Button>
             </ModalFooter>
             </Form>
         </Modal>
