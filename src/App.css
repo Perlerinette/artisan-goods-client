@@ -201,7 +201,7 @@
   display: block;
 
   /* width: calc(100% + 1.3px); */
-  height: 220px;
+  height: 230px;
   width: auto;
   transform: rotateY(180deg);
   z-index: -1;
@@ -255,11 +255,11 @@
 
 .pinkLoginDiv {
   background-color: #f7e1d7;
-  height: 170px;
+  height: 270px;
   position: relative;
-  bottom: -90px;
-  width: 1800px;
-  margin-left: -20%;
+  bottom: -80px;
+  width: 2000px;
+  margin-left: -40%;
 }
 
 .justify-content-md-center {
