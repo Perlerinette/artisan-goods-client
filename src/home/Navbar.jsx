@@ -1,16 +1,12 @@
-
-import logo from '../assets/AG-LOGO.gif';
 import React, { useState } from "react";
 import {
   Navbar,
-  NavbarBrand,
   Collapse,
   NavItem,
   Nav,
   NavbarToggler,
-  Button,
 } from "reactstrap";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Sitebar = (props) => {
