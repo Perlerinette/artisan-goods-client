@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import SiteBar from "./home/Navbar";
+import Logo from "./home/Logo";
 import Routes from "./home/Routes";
 import Footer from "./home/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -11,6 +12,7 @@ function App() {
       <div className="pageBody">
         <Router>
           <SiteBar />
+          <Logo />
           <Routes />
         </Router>
         <Footer />
