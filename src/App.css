@@ -23,8 +23,21 @@
   fill: black;
 }
 
+.navbarCss {
+  background-color: #b0c4b1;
+  height: 200px;
+}
+
+.navbarCss navbar navbar-expand-md navbar-light {
+  height: 200px;
+}
+
 .navbar {
-  height: 190px;
+  height: 40px;
+}
+
+.nav-item {
+  text-align: center;
 }
 
 .NavbarBrand {

@@ -22,20 +22,20 @@ const Sitebar = (props) => {
 
   // Hover effect on buttons
   function changeLink(e) {
-    e.target.style.fontWeight = 'bold';
-    e.target.style.color = '#b0c4b1';
+    // e.target.style.fontWeight = 'bold';
+    e.target.style.color = '#f7e1d7';
   }
 
   function resetLink(e) {
-    e.target.style.fontWeight = 'normal';
+    // e.target.style.fontWeight = 'normal';
     e.target.style.color = 'black';
   }
 
   return (
     
       // <div className="topDiv">
-    
-      <Navbar  light expand="md">
+      <div className='center'>
+      <Navbar className="navbarCss" dark expand="md">
       {/* <NavbarBrand>
           <a class="logo" href="#">
             <img
@@ -80,6 +80,7 @@ const Sitebar = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
+      </div>
     
   );
 };
