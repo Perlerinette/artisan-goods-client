@@ -16,7 +16,8 @@ const Footer = () => {
     return (
         <>
        
-        
+        <br/>
+        <br/>
         <div className="footer" style={{backgroundColor: '#b0c4b1', height: "250px", width: "auto", position: "relative"}}>
         
         <h1 id="socialMediaFooter">Like what you see? Follow Us!</h1>
