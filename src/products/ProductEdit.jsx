@@ -89,14 +89,15 @@ const ProductEdit = (props) => {
         setRadioButton();
     }, [])
 
-
+    function deleteImg(){
+        setEditPhotoURL('');
+    }
 
     return ( 
         <>
         <Modal isOpen={true} toggle={toggle}>
-             {/* <ModalHeader>Edit your product </ModalHeader> */}
              <Form onSubmit={productUpdate}>
-                <ModalHeader style={{marginLeft: "auto"}} close={closeButton} toggle={toggle}> 
+                <ModalHeader style={{marginLeft: "auto", backgroundColor: "#f7e1d7"}} close={closeButton} toggle={toggle}> 
                     Edit your product 
                 </ModalHeader>
                 <ModalBody>
@@ -133,38 +134,13 @@ const ProductEdit = (props) => {
 
                 {/* START CLOUDINARY          */}
                 <FormGroup>
-                    <Label htmlFor="photoURL">Upload image</Label>
+                    <Label htmlFor="photoURL">Upload image</Label> 
                     <Input type="file" onChange={uploadImage} />
-                    {loading ? <h6>Loading...</h6> : <img src={editPhotoURL} style={{width:   '150px'  }} style={{height:   '150px'  }} />} 
+                    <br/>
+                    {loading ? <h6>Loading...</h6> : <img src={editPhotoURL} style={{width:   '150px'  }} style={{height:   '150px'  }} />} {' '}
+                    <Button size= 'sm' color='outline-danger' disabled={loading} disabled={loading} onClick={deleteImg}>Delete image</Button>
                 </FormGroup>  
-                    {/* END CLOUDINARY          */}
-
-          {/* <Modal isOpen={true}>
-             <ModalHeader style={{marginLeft: "auto"}}>Edit your product</ModalHeader>
-              <ModalBody>
-                 <Form onSubmit={productUpdate}> 
-                      <FormGroup>
-                          <Label htmlFor="name">Edit name</Label>
-                          <Input name="name" value={editName} onChange={(e) => setEditName(e.target.value)}/>
-                      </FormGroup>
-
-                      <FormGroup>
-                          <Label htmlFor="price">Edit price</Label>
-                          <Input type="number" min="0" name='price' value={editPrice} onChange={(e) => setEditPrice(e.target.value)}/>
-                      </FormGroup>
-                      <FormGroup>
-                          <Label htmlFor="description">Edit description</Label>
-                          <Input type="textarea" name="description" value={editDescription} onChange={(e) => setEditDescription(e.target.value)}/>
-                      </FormGroup>
-             
-             
-             <FormGroup>
-             <Label htmlFor="photoURL">Upload image</Label>
-             <Input  
-                 type="file"
-                 placeholder="Upload a photo"
-                 onChange={uploadImage} */}
-                
+                    {/* END CLOUDINARY          */}              
                     
                 {/* <FormGroup check>
                     <Label htmlFor='publish' check>
@@ -174,8 +150,8 @@ const ProductEdit = (props) => {
                 </FormGroup> */}
                                     
             </ModalBody>
-            <ModalFooter style={{justifyContent: 'center'}}>
-                <Button disableonClick={toggle} type="submit">Update!</Button>
+            <ModalFooter style={{justifyContent: 'center', backgroundColor: "#f7e1d7"}}>
+                <Button disabled={loading} onClick={toggle} type="submit">Update!</Button>
             </ModalFooter>
             </Form>
         </Modal>
