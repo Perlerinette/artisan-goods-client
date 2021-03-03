@@ -131,7 +131,7 @@ const ProductCreate = (props) => {
                 <FormGroup>
                     <Label htmlFor="photoURL">Upload image</Label>
                     <Input type="file" onChange={uploadImage} />
-                    {loading ? <h6>Loading...</h6> : <img src={photoURL} style={{width:'150px'}} style={{height:'150px'}} /> } 
+                    {loading ? <h6>Loading...</h6> : <img src={photoURL} style={{width:'120px'}} style={{height:'120px'}} /> } 
                     <br/>
                     <Button size= 'sm' color='outline-danger' disabled={loading || photoURL===''} onClick={deleteImg} >Delete image</Button>
                 </FormGroup>  
