@@ -1,16 +1,12 @@
-
-import logo from '../assets/AG-LOGO.gif';
 import React, { useState } from "react";
 import {
   Navbar,
-  NavbarBrand,
   Collapse,
   NavItem,
   Nav,
   NavbarToggler,
-  Button,
 } from "reactstrap";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Sitebar = (props) => {
@@ -35,14 +31,13 @@ const Sitebar = (props) => {
 
   return (
     
-      // <div className="topDiv">
-      <div className='center'>
-      <Navbar className="navbarCss" dark expand="md">
+      <Navbar className="navbarCss " dark expand="md">
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
+          <Nav className="ml-auto mr-auto" navbar>
             <NavItem>
               <Link
+                onMouseOver={changeLink} onMouseLeave={resetLink}
                 style={{ color: "black" }}
                 className="text-decoration-none pl-5"
                 to="/"
@@ -50,6 +45,7 @@ const Sitebar = (props) => {
                 Home
               </Link>
               <Link
+                onMouseOver={changeLink} onMouseLeave={resetLink}
                 style={{ color: "black" }}
                 className="text-decoration-none pl-5"
                 to="/myShop"
@@ -57,6 +53,7 @@ const Sitebar = (props) => {
                 My Shop
               </Link>
               <Link
+                onMouseOver={changeLink} onMouseLeave={resetLink}
                 style={{ color: "black" }}
                 className="text-decoration-none pl-5"
                 to="/logOut"
@@ -67,7 +64,6 @@ const Sitebar = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
-      </div>
     
   );
 };
