@@ -34,8 +34,8 @@ const Sitebar = (props) => {
   return (
     
       // <div className="topDiv">
-    
-      <Navbar  light expand="md">
+    <div className='d-flex justify-content-center'>
+      <Navbar  light expand="md" >
       {/* <NavbarBrand>
           <a class="logo" href="#">
             <img
@@ -80,7 +80,7 @@ const Sitebar = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
-    
+      </div>
   );
 };
 

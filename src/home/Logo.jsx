@@ -3,8 +3,8 @@ import logo from '../assets/AG-LOGO.gif';
 
 const Logo = () => {
     return ( 
-        <div style={{justifyContent: 'center'}}>
-        <a class="logo" href="#">
+        <div className='d-flex justify-content-center'>
+        <a className="logo" >
             <img
               src={logo}
               // style={ {paddingTop: "35px"}}
