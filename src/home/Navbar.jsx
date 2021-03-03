@@ -1,4 +1,3 @@
-import logo from '../assets/AG-LOGO.gif';
 import React, { useState } from "react";
 import {
   Navbar,
@@ -20,31 +19,19 @@ const Sitebar = (props) => {
     setIsOpen(newIsOpen);
   };
 
-  // Hover effect on buttons
-  function changeLink(e) {
-    e.target.style.fontWeight = 'bold';
-    e.target.style.color = '#b0c4b1';
-  }
-
-  function resetLink(e) {
-    e.target.style.fontWeight = 'normal';
-    e.target.style.color = 'black';
-  }
-
   return (
     <>
       <div className="topDiv">
   
       </div>
       <Navbar light expand="md">
-      <NavbarBrand>
+        <NavbarBrand>
           <a class="logo" href="#">
             <img
-              src={logo}
-              // style={ {paddingTop: "35px"}}
+              src="https://i.pinimg.com/564x/57/c7/18/57c71821fd32b00caf33820cc81cc2de.jpg"
               alt=""
-              width="100"
-              height="100"
+              width="90"
+              height="90"
             />
           </a>
           Artisan Goods
@@ -54,24 +41,21 @@ const Sitebar = (props) => {
           <Nav className="ml-auto" navbar>
             <NavItem>
               <Link
-                onMouseOver={changeLink} onMouseLeave={resetLink}
-                style={{ color: "black", fontSize:'large' }}
+                style={{ color: "black" }}
                 className="text-decoration-none pl-5"
                 to="/"
               >
                 Home
               </Link>
               <Link
-                onMouseOver={changeLink} onMouseLeave={resetLink}
-                style={{ color: "black", fontSize:'large' }}
+                style={{ color: "black" }}
                 className="text-decoration-none pl-5"
                 to="/myShop"
               >
                 My Shop
               </Link>
               <Link
-                onMouseOver={changeLink} onMouseLeave={resetLink}
-                style={{ color: "black", fontSize:'large' }}
+                style={{ color: "black" }}
                 className="text-decoration-none pl-5"
                 to="/logOut"
               >
