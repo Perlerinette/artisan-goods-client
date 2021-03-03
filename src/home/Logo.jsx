@@ -3,15 +3,9 @@ import logo from '../assets/AG-LOGO.gif';
 
 const Logo = () => {
     return ( 
-<<<<<<< HEAD
-        <div className='d-flex justify-content-center'>
-        <a className="logo" >
-            <img
-=======
         <div className='d-flex justify-content-center' style={{height: 240, padding: 30}}>
         <a  className="logo text-decoration-none" >
             <img 
->>>>>>> 4029f0758c1021e10c3e70780afef2ca13911ae9
               src={logo}
               // style={ {paddingTop: "35px"}}
               alt=""

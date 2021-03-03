@@ -35,14 +35,13 @@ const Sitebar = (props) => {
 
   return (
     
-      // <div className="topDiv">
-      <div className='center'>
-      <Navbar className="navbarCss" dark expand="md">
+      <Navbar className="navbarCss " dark expand="md">
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
+          <Nav className="ml-auto mr-auto" navbar>
             <NavItem>
               <Link
+                onMouseOver={changeLink} onMouseLeave={resetLink}
                 style={{ color: "black" }}
                 className="text-decoration-none pl-5"
                 to="/"
@@ -50,6 +49,7 @@ const Sitebar = (props) => {
                 Home
               </Link>
               <Link
+                onMouseOver={changeLink} onMouseLeave={resetLink}
                 style={{ color: "black" }}
                 className="text-decoration-none pl-5"
                 to="/myShop"
@@ -57,6 +57,7 @@ const Sitebar = (props) => {
                 My Shop
               </Link>
               <Link
+                onMouseOver={changeLink} onMouseLeave={resetLink}
                 style={{ color: "black" }}
                 className="text-decoration-none pl-5"
                 to="/logOut"
@@ -67,11 +68,7 @@ const Sitebar = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
-      </div>
-<<<<<<< HEAD
-=======
     
->>>>>>> 4029f0758c1021e10c3e70780afef2ca13911ae9
   );
 };
 
