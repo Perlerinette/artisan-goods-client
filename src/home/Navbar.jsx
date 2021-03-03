@@ -19,6 +19,17 @@ const Sitebar = (props) => {
     setIsOpen(newIsOpen);
   };
 
+  // Hover effect on buttons
+  function changeLink(e) {
+    e.target.style.fontWeight = 'bold';
+    e.target.style.color = '#b0c4b1';
+  }
+
+  function resetLink(e) {
+    e.target.style.fontWeight = 'normal';
+    e.target.style.color = 'black';
+  }
+
   return (
     <>
       <div className="topDiv">
@@ -41,21 +52,24 @@ const Sitebar = (props) => {
           <Nav className="ml-auto" navbar>
             <NavItem>
               <Link
-                style={{ color: "black" }}
+                onMouseOver={changeLink} onMouseLeave={resetLink}
+                style={{ color: "black", fontSize:'large' }}
                 className="text-decoration-none pl-5"
                 to="/"
               >
                 Home
               </Link>
               <Link
-                style={{ color: "black" }}
+                onMouseOver={changeLink} onMouseLeave={resetLink}
+                style={{ color: "black", fontSize:'large' }}
                 className="text-decoration-none pl-5"
                 to="/myShop"
               >
                 My Shop
               </Link>
               <Link
-                style={{ color: "black" }}
+                onMouseOver={changeLink} onMouseLeave={resetLink}
+                style={{ color: "black", fontSize:'large' }}
                 className="text-decoration-none pl-5"
                 to="/logOut"
               >
