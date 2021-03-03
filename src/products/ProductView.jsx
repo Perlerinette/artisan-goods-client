@@ -17,20 +17,23 @@ const ProductView = (props) => {
 
   function changeBtn(e) {
     // e.target.style.fontSize = 'larger';
-    e.target.style.fontStyle = 'italic';
+    e.target.style.color = '#f7e1d7';
+    e.target.style.fontWeight = 'bold';
   }
 
   function resetBtn(e) {
     // e.target.style.fontSize = 'initial';
-    e.target.style.fontStyle = 'initial';
+    // e.target.style.fontStyle = 'initial';
+    e.target.style.fontWeight = 'initial';
+    e.target.style.color = 'white';
   }
 
   const productListMapper = () => {
     return props.productList.map((product, index) => {
       return (
         <>
-        <tr key={index}>
-          <td>
+        <tr key={index} >
+          <td > 
             <MyPageCards productItem={product} />
             <div class="flexbox-container">
                 <div class="flexbox-item-1">

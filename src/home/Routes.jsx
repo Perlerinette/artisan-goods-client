@@ -16,17 +16,29 @@ const Routes = (props) => {
         }
     }, []);
 
+    useEffect(() => {
+        if (localStorage.getItem("email")) {
+            setUserEmail(localStorage.getItem("email"));
+        }
+    }, []);
+
     const updateToken = (newToken) => {
         localStorage.setItem("token", newToken);
         setSessionToken(newToken);
         console.log(sessionToken);
     };
 
+    const updateEmail = (newEmail) => {
+        localStorage.setItem("email", newEmail);
+        setUserEmail(newEmail);
+        console.log(userEmail);
+    };
+
     
 
     const protectedViews = () => {
         return (
-          sessionToken === localStorage.getItem('token') ? <ProductIndex token={sessionToken} email={userEmail} /> : <Auth updateToken={updateToken} setUserEmail={setUserEmail}/>
+          sessionToken === localStorage.getItem('token') ? <ProductIndex token={sessionToken} email={userEmail} /> : <Auth updateToken={updateToken} updateEmail={updateEmail}/>
         )
     }
 
@@ -40,7 +52,7 @@ const Routes = (props) => {
                 {protectedViews()}
             </Route>
             <Route exact path="/logOut">
-                <Logout setSessionToken={setSessionToken} updateToken={updateToken} setUserEmail={setUserEmail}/>
+                <Logout setSessionToken={setSessionToken} updateToken={updateToken} setUserEmail={setUserEmail} updateEmail={updateEmail}/>
                      
             </Route>
         </Switch>

@@ -45,11 +45,22 @@ const ProductIndex = (props) => {
         getListOfProducts();
     }, [])
 
+    function whoIsConnected(){
+        localStorage.getItem("email");
+    }
+
+    useEffect(() => {
+        // localStorage.getItem("email");
+        whoIsConnected()
+    }, []);
+
     return ( 
         <>
         <div className='text-right' >
                 <Col style ={{padding: '70px'}} md='12'>
-                <h6 className='font-italic'>{props.email} is connected</h6>
+                    <hr color="#f7e1d7"/>
+                    <h6 className='font-italic' style={{color: "#91a597"}}>{localStorage.getItem("email")} is connected</h6>
+                    <hr color="f7e1d7"/>
                 </Col>
         </div>
         <Container>
