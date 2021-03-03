@@ -1,4 +1,4 @@
-import logo from '../assets/AG-LOGO.gif';
+// import logo from '../assets/AG-LOGO.gif';
 import React, { useState } from "react";
 import {
   Navbar,
@@ -32,12 +32,11 @@ const Sitebar = (props) => {
   }
 
   return (
-    <>
-      <div className="topDiv">
-  
-      </div>
-      <Navbar light expand="md">
-      <NavbarBrand>
+    
+      // <div className="topDiv">
+    
+      <Navbar  light expand="md">
+      {/* <NavbarBrand>
           <a class="logo" href="#">
             <img
               src={logo}
@@ -48,7 +47,7 @@ const Sitebar = (props) => {
             />
           </a>
           Artisan Goods
-        </NavbarBrand>
+        </NavbarBrand> */}
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
@@ -81,7 +80,7 @@ const Sitebar = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
-    </>
+    
   );
 };
 
