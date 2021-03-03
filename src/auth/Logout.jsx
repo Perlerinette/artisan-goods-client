@@ -17,7 +17,7 @@ const LogOut = (props) => {
 
     return ( 
         <>
-        <Auth updateToken={props.updateToken} setUserEmail={props.setUserEmail}/>
+        <Auth updateToken={props.updateToken} updateEmail={props.updateEmail}/>
         </>
 
      );

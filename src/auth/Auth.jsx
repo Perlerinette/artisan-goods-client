@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Container, Row, Col, Label} from 'reactstrap';
 import Signup from './Signup';
 import Login from './Login';
@@ -8,6 +8,20 @@ const Auth = (props) => {
     const [displayLogin, setDisplayLogin] = useState(false);
     const toggle = () => setDisplayLogin(!displayLogin);
 
+   //to display who is connected and store in localStorage
+   const [userEmail, setUserEmail] = useState('');
+
+   useEffect(() => {
+     if (localStorage.getItem("email")) {
+         setUserEmail(localStorage.getItem("email"));
+     }
+   }, []);
+
+   const updateEmail = (newEmail) => {
+     localStorage.setItem("email", newEmail);
+     setUserEmail(newEmail);
+     console.log(userEmail);
+   };
 
     return(
         
@@ -34,9 +48,10 @@ const Auth = (props) => {
                     <Login updateToken={props.updateToken} setUserEmail={props.setUserEmail}/>
                 </Col>
             </Row> */}
+
             <Row className='justify-content-md-center' style= {{width: "auto"}}>
-                {displayLogin ? <Login updateToken={props.updateToken} setUserEmail={props.setUserEmail}/> : 
-                        <Signup updateToken={props.updateToken} setUserEmail={props.setUserEmail}/> }
+                {displayLogin ? <Login updateToken={props.updateToken} updateEmail={props.updateEmail}/> : 
+                        <Signup updateToken={props.updateToken} updateEmail={props.updateEmail}/> }
             </Row>
             <Row className='justify-content-md-center' >
                 {displayLogin ? <a style={{cursor:'pointer', fontSize: 22, padding: 5}} onClick={toggle} >New here? Register.</a> : 

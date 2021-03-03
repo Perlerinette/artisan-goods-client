@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Form, FormGroup, Label, Input, Button, InputGroup, InputGroupAddon, InputGroupText} from 'reactstrap';
 import { LockFill, PersonFill, EyeFill, EyeSlashFill } from 'react-bootstrap-icons';
 import {useHistory} from 'react-router-dom';
@@ -22,8 +22,7 @@ const Login = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(email, password);
-        props.setUserEmail(email);
-
+        
         fetch("http://localhost:3000/user/login", {
             method: "POST",
             body: JSON.stringify({
@@ -39,11 +38,14 @@ const Login = (props) => {
               console.log(data);
               console.log(data.sessionToken);
               props.updateToken(data.sessionToken);
+              props.updateEmail(data.user.email);
+              console.log(data.user.email);
               history.push('/MyShop');
             });
             
           }
 
+          
 
     return(
     
