@@ -41,7 +41,7 @@ const HomeGalleryChild = (props) => {
           {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
         </ModalHeader>
         <ModalBody style={{textAlign: "center"}}>
-          <CardImg src={props.productItem.photoURL} alt="Card image" width="350" height="270" onError = {errorHandling} />
+          <CardImg src={props.productItem.photoURL} alt="Card image" width="300" height="270" onError = {errorHandling} />
           <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
           <CardText>
             {props.productItem.description}{' '}
