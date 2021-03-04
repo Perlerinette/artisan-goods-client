@@ -32,7 +32,7 @@ const HomeGalleryChild = (props) => {
     return ( 
      
       <div className="Cards">
-      <Card className="CardCss" style={{textAlign: "center" , width: '350px', height: "450px", padding: "0px", marginBottom: 20, boxShadow: " lightGrey 2px 2px"}}>
+      <Card className="CardCss" style={{textAlign: "center" , width: '350px', height: "450px", padding: "0px", marginBottom: 20, boxShadow: " lightGrey 3px 3px"}}>
         <CardImg src={props.productItem.photoURL} alt="Card image" width="350" height="270" onError = {errorHandling} />
         <CardBody className="CardBody" style = {{background: "white"}} >
           <CardTitle tag="h5" style={{fontSize: 17}}>{props.productItem.name}</CardTitle>
@@ -45,12 +45,12 @@ const HomeGalleryChild = (props) => {
       </Card>
 
       <Modal isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader style={{backgroundColor: "#f7e1d7" , textAlign: "center"}} toggle={toggle}>
+        <ModalHeader style={{backgroundColor: "#f7e1d7" , textAlign: "center", height: 85}} toggle={toggle}>
           {props.productItem.name}
           {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
         </ModalHeader>
         <Row className="justify-content-center">
-        <img src={props.productItem.photoURL} alt="Card image" width="300" height="200"  onError = {errorHandling}/>
+        <img src={props.productItem.photoURL} alt="Card image" width="370" height="310" style={{padding: 20}}  onError = {errorHandling}/>
         </Row>
         <ModalBody style={{textAlign: "center"}}>
           <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>

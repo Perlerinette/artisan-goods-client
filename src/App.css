@@ -336,3 +336,15 @@ a.social:hover {
   transform: translateY(-2px);
   color: rgb(248, 229, 220);
 }
+
+.container {
+  display: flex;
+}
+
+.description {
+  text-align: left;
+}
+
+.card-body {
+  padding: 0 !important;
+}

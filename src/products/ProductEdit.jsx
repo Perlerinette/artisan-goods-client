@@ -111,22 +111,22 @@ const ProductEdit = (props) => {
                 </ModalHeader>
                 <ModalBody>
                     <FormGroup>
-                        <Label htmlFor="name">Edit name</Label>
+                        <Label className="labelCss" htmlFor="name">Edit name</Label>
                         <Input name="name" value={editName} onChange={(e) => setEditName(e.target.value)}/>
                     </FormGroup>
 
                     <FormGroup>
-                        <Label htmlFor="price">Edit price</Label>
+                        <Label className="labelCss" htmlFor="price">Edit price</Label>
                         <Input type="number" min="0" name='price' value={editPrice} onChange={(e) => setEditPrice(e.target.value)}/>
                     </FormGroup>
 
                     <FormGroup>
-                        <Label htmlFor="description">Edit description</Label>
+                        <Label className="labelCss" htmlFor="description">Edit description</Label>
                         <Input type="textarea" name="description" value={editDescription} onChange={(e) => setEditDescription(e.target.value)}/>
                     </FormGroup>
 
                     <FormGroup >
-                    <Label htmlFor='availability'>Availability</Label >
+                    <Label className= "labelCss" htmlFor='availability'>Availability</Label >
                     <FormGroup check>
                     <Label check>
                         <Input type="radio" name="availability" value='inStock' defaultchecked={isChecked} onChange={(e) => onValueChange(e)}/>{' '}
@@ -134,7 +134,7 @@ const ProductEdit = (props) => {
                     </Label>
                     </FormGroup>
                     <FormGroup check>
-                    <Label check>
+                    <Label className="labelCss" check>
                         <Input type="radio" name="availability" value='OutOfStock' onChange={(e) => onValueChange(e)}/>
                         Out of Stock
                     </Label>
@@ -143,7 +143,7 @@ const ProductEdit = (props) => {
 
                 {/* START CLOUDINARY          */}
                 <FormGroup>
-                    <Label htmlFor="photoURL">Upload image</Label> 
+                    <Label className="labelCss" htmlFor="photoURL">Upload image</Label> 
                     <Input type="file" onChange={uploadImage} />
                     <br/>
                     {loading ? <h6>Loading...</h6> : <img src={editPhotoURL} style={{width:   '150px'  }} style={{height:   '150px'  }} />} {' '}
