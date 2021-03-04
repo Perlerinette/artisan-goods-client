@@ -45,7 +45,7 @@ const HomeGalleryChild = (props) => {
       </Card>
 
       <Modal isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader style={{backgroundColor: "#f7e1d7" , textAlign: "center"}} toggle={toggle}>
+        <ModalHeader style={{backgroundColor: "#f7e1d7" , textAlign: "center", height: 90, borderRadius: 10}} toggle={toggle}>
           {props.productItem.name}
           {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
         </ModalHeader>
