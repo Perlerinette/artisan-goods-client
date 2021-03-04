@@ -82,10 +82,10 @@
 }
 
 .auth-container {
-  height: 600px;
+  height: 560px;
   width: 800px;
   position: relative;
-  bottom: 90px;
+  bottom: 150px;
 }
 
 .custom-shape-divider-bottom-1614346458 {
@@ -138,8 +138,8 @@
 
 .signUp {
   position: relative;
-  bottom: 00px;
-  height: 370px;
+  bottom: 20px;
+  height: 350px;
   width: 320px;
   background-color: #e1e2e3;
   opacity: 80%;
@@ -149,7 +149,8 @@
 
 .login {
   position: relative;
-  height: 370px;
+  bottom: 20px;
+  height: 350px;
   width: 320px;
   background-color: #e1e2e3;
   opacity: 80%;
@@ -199,7 +200,7 @@
 }
 
 .submitBtn {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .custom-shape-divider-bottom-1614655104 {
@@ -271,7 +272,7 @@
 
 .pinkLoginDiv {
   background-color: #f7e1d7;
-  height: 270px;
+  height: 350px;
   position: relative;
   bottom: -80px;
   width: 2000px;
