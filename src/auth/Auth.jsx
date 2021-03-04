@@ -5,7 +5,7 @@ import Login from './Login';
 
 const Auth = (props) => {
 
-    const [displayLogin, setDisplayLogin] = useState(false);
+    const [displayLogin, setDisplayLogin] = useState(true);
     const toggle = () => setDisplayLogin(!displayLogin);
 
    //to display who is connected and store in localStorage
