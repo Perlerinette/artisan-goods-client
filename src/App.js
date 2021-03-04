@@ -1,31 +1,22 @@
-import './App.css';
-import SiteBar from './home/Navbar';
-import React, { useState, useEffect } from 'react';
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import SiteBar from "./home/Navbar";
+import Logo from "./home/Logo";
+import Routes from "./home/Routes";
+import Footer from "./home/Footer";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
-
-  const [sessionToken, setSessionToken] = useState('');
-
-  useEffect(() => {
-    if(localStorage.getItem('token')){
-      setSessionToken(localStorage.getItem('token'));
-    }
-  }, []);
-
-  const updateToken = (newToken) => {
-    localStorage.setItem('token', newToken);
-    setSessionToken(newToken);
-    console.log(newToken);
-  }
-
-  const clearToken = () => {
-    localStorage.clear();
-    setSessionToken('');
-  }
-
   return (
-    <div >
-        <SiteBar clickLogout={clearToken}/>
+    <div>
+      <div className="pageBody">
+        <Router>
+          <SiteBar />
+          <Logo />
+          <Routes />
+        </Router>
+        <Footer />
+      </div>
     </div>
   );
 }
