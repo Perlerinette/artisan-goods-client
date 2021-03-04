@@ -50,7 +50,7 @@ const HomeGalleryChild = (props) => {
           {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
         </ModalHeader>
         <Row className="justify-content-center">
-        <img src={props.productItem.photoURL} alt="Card image" width="300" height="200"  onError = {errorHandling}/>
+        <img src={props.productItem.photoURL} alt="Card image" width="370" height="310" style={{padding:20}} onError = {errorHandling}/>
         </Row>
         <ModalBody style={{textAlign: "center"}}>
           <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
