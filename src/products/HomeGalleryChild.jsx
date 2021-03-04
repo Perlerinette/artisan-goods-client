@@ -45,12 +45,12 @@ const HomeGalleryChild = (props) => {
       </Card>
 
       <Modal isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader style={{backgroundColor: "#f7e1d7" , textAlign: "center"}} toggle={toggle}>
+        <ModalHeader style={{backgroundColor: "#f7e1d7" , textAlign: "center", height: 90, borderRadius: 10}} toggle={toggle}>
           {props.productItem.name}
           {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
         </ModalHeader>
         <Row className="justify-content-center">
-        <img src={props.productItem.photoURL} alt="Card image" width="300" height="200"  onError = {errorHandling}/>
+        <img src={props.productItem.photoURL} alt="Card image" width="370" height="310" style={{padding:20}} onError = {errorHandling}/>
         </Row>
         <ModalBody style={{textAlign: "center"}}>
           <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
