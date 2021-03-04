@@ -16,20 +16,16 @@ const MyPageCards = (props) => {
 
   return ( 
     <div>
-      <Card className="myShopCard " style={{width: 810,  height: 245, backgroundColor: "#f5f5f5"}}>
-        <CardBody className="container" >
-          <div className="img1">
-          <CardImg src={props.productItem.photoURL} alt="card image" style={{width: 280, height: 245, padding: 10, borderRadius: 10}} onError = {errorHandling} /> 
-          </div>
-          <div className="description" style={{padding: 15}}>
-          <CardTitle style={{fontSize: 25}} tag="h5">{props.productItem.name}</CardTitle>
+      <Card className="myShopCard " style={{width: 550,  height: 450, marginLeft: "16%", backgroundColor: "#f5f5f5"}}>
+        <CardBody >
+          <CardImg src={props.productItem.photoURL} alt="card image" style={{width:   '175px'  }} onError = {errorHandling} /> 
+          <CardTitle tag="h5">{props.productItem.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">${props.productItem.price}</CardSubtitle>
           <CardText>
             {props.productItem.availability === true ? <p className='text-success'>In stock</p> : <p className='text-danger'>Out of stock</p>}
             </CardText>
-          <div style={{ borderRadius: 5, display: "block"}}>
+          <div style={{ borderRadius: 5, padding: 20, display: "block"}}>
           <CardText tag="h6">{props.productItem.description}</CardText>
-          </div>
           </div>
         </CardBody>
       </Card>

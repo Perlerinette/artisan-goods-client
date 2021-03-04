@@ -32,7 +32,7 @@ const HomeGalleryChild = (props) => {
     return ( 
      
       <div className="Cards">
-      <Card className="CardCss" style={{textAlign: "center" , width: '350px', height: "450px", padding: "0px", marginBottom: 20, boxShadow: " lightGrey 3px 3px"}}>
+      <Card className="CardCss" style={{textAlign: "center" , width: '350px', height: "450px", padding: "0px", marginBottom: 20, boxShadow: " lightGrey 3px px"}}>
         <CardImg src={props.productItem.photoURL} alt="Card image" width="350" height="270" onError = {errorHandling} />
         <CardBody className="CardBody" style = {{background: "white"}} >
           <CardTitle tag="h5" style={{fontSize: 17}}>{props.productItem.name}</CardTitle>
