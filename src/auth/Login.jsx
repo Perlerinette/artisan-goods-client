@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {Form, FormGroup, Label, Input, Button, InputGroup, InputGroupAddon, InputGroupText} from 'reactstrap';
 import { LockFill, PersonFill, EyeFill, EyeSlashFill } from 'react-bootstrap-icons';
 import {useHistory} from 'react-router-dom';
+import APIURL from '../helpers/environment';
 
 const Login = (props) => {
 
@@ -23,7 +24,7 @@ const Login = (props) => {
         event.preventDefault();
         console.log(email, password);
         
-        fetch("http://localhost:3000/user/login", {
+        fetch(`${APIURL}/user/login`, {
             method: "POST",
             body: JSON.stringify({
              email: email, 

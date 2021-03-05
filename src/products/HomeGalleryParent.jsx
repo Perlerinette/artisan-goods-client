@@ -7,7 +7,7 @@ import WallArt from "./assets/wallArt.jpg";
 import TableSetting from "./assets/tableSetting.jpeg";
 import Candle from "./assets/candle.jpeg";
 
-
+import APIURL from '../helpers/environment';
 
 
 const HomeGalleryParent = (props) => {
@@ -52,7 +52,7 @@ const HomeGalleryParent = (props) => {
     ];
 
     const fetchProducts = () => {
-        fetch('http://localhost:3000/product/', {
+        fetch(`${APIURL}/product/`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json'

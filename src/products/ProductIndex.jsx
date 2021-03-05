@@ -4,6 +4,7 @@ import Auth from '../auth/Auth';
 import ProductCreate from './ProductCreate';
 import ProductView from './ProductView';
 import ProductEdit from './ProductEdit';
+import APIURL from '../helpers/environment';
 
 const ProductIndex = (props) => {
 
@@ -12,7 +13,7 @@ const ProductIndex = (props) => {
     const [productToUpdate, setProductToUpdate] = useState({});
 
     const getListOfProducts = () => {
-        fetch('http://localhost:3000/product/owner', {
+        fetch(`${APIURL}/product/owner`, {
             method: 'GET',
             headers:new Headers ({
                 'Content-Type': 'application/json',

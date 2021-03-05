@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Table, Button} from "reactstrap";
 import MyPageCards from "./MyPageCards";
+import APIURL from '../helpers/environment';
 
 const ProductView = (props) => {
   const deleteProduct = (product) => {
-    fetch(`http://localhost:3000/product/delete/${product.id}`, {
+    fetch(`${APIURL}/product/delete/${product.id}`, {
       method: "DELETE",
       headers: new Headers({
         "Content-Type": "application/json",

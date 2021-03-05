@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import APIURL from '../helpers/environment';
 
 const CLOUD_URL = 'https://api.cloudinary.com/v1_1/natescloudinary/image/upload'
 
@@ -9,7 +10,7 @@ const ImgageUpload = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const response = await fetch('http://localhost:3000/product/cloudsign', {
+        const response = await fetch(`${APIURL}/product/cloudsign`, {
             method: 'GET',
             headers: {
                 'Authorization': props.token
@@ -34,7 +35,7 @@ const ImgageUpload = (props) => {
 
         console.log(results)
 
-        const final = await (await fetch('http://localhost:3000/product/photoURL', {
+        const final = await (await fetch(`${APIURL}/product/photoURL`, {
             method: 'PUT',
             headers: {
                 'Authorization': props.token,

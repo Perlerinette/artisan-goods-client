@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 const ProductCreate = (props) => {
 
@@ -42,7 +43,7 @@ const ProductCreate = (props) => {
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        fetch("http://localhost:3000/product/create" , {
+        fetch(`${APIURL}/product/create` , {
             method: 'POST',
             body: JSON.stringify({
                 product:{
