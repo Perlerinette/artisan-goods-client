@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Container, Row, Col} from 'reactstrap';
-import Auth from '../auth/Auth';
+import {Container, Row, Col, Button} from 'reactstrap';
 import ProductCreate from './ProductCreate';
 import ProductView from './ProductView';
 import ProductEdit from './ProductEdit';
@@ -55,12 +54,22 @@ const ProductIndex = (props) => {
         whoIsConnected()
     }, []);
 
+
+    const clearToken = () => {
+        localStorage.clear();
+        props.setSessionToken('');
+        props.setUserEmail('');
+        console.log("Logged out");
+    };
+
+
     return ( 
         <>
         <div className='text-right' >
                 <Col style ={{padding: '70px'}} md='12'>
                     <hr color="#f7e1d7"/>
                     <h6 className='font-italic' style={{color: "#91a597"}}>{localStorage.getItem("email")} is connected</h6>
+                    <Button size="sm" onClick={clearToken}>Log out</Button>
                     <hr color="f7e1d7"/>
                 </Col>
         </div>

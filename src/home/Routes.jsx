@@ -5,7 +5,6 @@ import SiteBar from "./Navbar";
 import Logo from "./Logo";
 import ProductIndex from '../products/ProductIndex';
 import HomeGalleryParent from '../products/HomeGalleryParent';
-import Logout from '../auth/Logout';
 
 const Routes = (props) => {
 
@@ -40,7 +39,7 @@ const Routes = (props) => {
 
     const protectedViews = () => {
         return (
-          sessionToken === localStorage.getItem('token') ? <ProductIndex token={sessionToken} email={userEmail} /> : <Auth updateToken={updateToken} updateEmail={updateEmail}/>
+          sessionToken === localStorage.getItem('token') ? <ProductIndex token={sessionToken} email={userEmail} setSessionToken={setSessionToken} updateToken={updateToken} setUserEmail={setUserEmail} updateEmail={updateEmail} /> : <Auth updateToken={updateToken} updateEmail={updateEmail}/>
         )
     }
 
@@ -54,9 +53,6 @@ const Routes = (props) => {
             </Route>
             <Route exact path="/myShop">
                 {protectedViews()}
-            </Route>
-            <Route exact path="/logOut">
-                <Logout setSessionToken={setSessionToken} updateToken={updateToken} setUserEmail={setUserEmail} updateEmail={updateEmail}/>       
             </Route>
         </Switch>
         </>
