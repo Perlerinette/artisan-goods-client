@@ -44,8 +44,7 @@ const Login = (props) => {
               history.push('/MyShop');
             });
             
-          }
-
+    }
           
 
     return(

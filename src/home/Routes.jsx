@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Auth from '../auth/Auth';
+import SiteBar from "./Navbar";
+import Logo from "./Logo";
 import ProductIndex from '../products/ProductIndex';
 import HomeGalleryParent from '../products/HomeGalleryParent';
 import Logout from '../auth/Logout';
@@ -20,7 +22,7 @@ const Routes = (props) => {
         if (localStorage.getItem("email")) {
             setUserEmail(localStorage.getItem("email"));
         }
-    }, []);
+    }, [userEmail]);
 
     const updateToken = (newToken) => {
         localStorage.setItem("token", newToken);
@@ -42,8 +44,10 @@ const Routes = (props) => {
         )
     }
 
-
     return ( 
+        <>
+        <SiteBar/>
+        <Logo />
         <Switch>
             <Route exact path="/">
                 <HomeGalleryParent />
@@ -52,10 +56,10 @@ const Routes = (props) => {
                 {protectedViews()}
             </Route>
             <Route exact path="/logOut">
-                <Logout setSessionToken={setSessionToken} updateToken={updateToken} setUserEmail={setUserEmail} updateEmail={updateEmail}/>
-                     
+                <Logout setSessionToken={setSessionToken} updateToken={updateToken} setUserEmail={setUserEmail} updateEmail={updateEmail}/>       
             </Route>
         </Switch>
+        </>
      )
 }
  

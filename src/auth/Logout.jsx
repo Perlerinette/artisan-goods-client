@@ -15,6 +15,8 @@ const LogOut = (props) => {
         clearToken()
     }, []);
 
+    
+
     return ( 
         <>
         <Auth updateToken={props.updateToken} updateEmail={props.updateEmail}/>
