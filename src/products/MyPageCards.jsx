@@ -17,7 +17,7 @@ const MyPageCards = (props) => {
   return ( 
     <div>
       <Card className="myShopCard " style={{width: 810,  height: 255, backgroundColor: "#f5f5f5"}}>
-        <CardBody id="container" >
+        <CardBody id="container-MyPageCards" >
           <div className="img1">
           <CardImg src={props.productItem.photoURL} alt="card image" style={{width: 286, height: 255, padding: 10, borderRadius: 10}} onError = {errorHandling} /> 
           </div>
