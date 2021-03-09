@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Navbar,
   Collapse,
   NavItem,
   Nav,
   NavbarToggler,
+  Button
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
 
 const Sitebar = (props) => {
+
+  
+  const [showLogOut, setShowLogOut] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -27,6 +31,43 @@ const Sitebar = (props) => {
   function resetLink(e) {
     // e.target.style.fontWeight = 'normal';
     e.target.style.color = 'black';
+  }
+
+  useEffect(() => {
+    if (localStorage.getItem("email")) {
+        setShowLogOut(true);
+    }
+  }, [showLogOut]);
+
+  function hideLogOut(){
+    setShowLogOut(false);
+    refreshPage();
+  }
+
+  function refreshPage(){
+    window.location.reload(false);
+  }
+
+  function displayLogOut(){
+    console.log(showLogOut);
+
+    return (
+
+    showLogOut ? 
+      <Link
+      onMouseOver={changeLink} onMouseLeave={resetLink} onClick={hideLogOut}
+      style={{ color: "black" }}
+      className="text-decoration-none pl-5"
+      to="/logOut"
+      >
+      Log Out
+      </Link>
+
+      :
+      null
+
+    )
+
   }
 
   return (
@@ -52,14 +93,9 @@ const Sitebar = (props) => {
               >
                 My Shop
               </Link>
-              <Link
-                onMouseOver={changeLink} onMouseLeave={resetLink}
-                style={{ color: "black" }}
-                className="text-decoration-none pl-5"
-                to="/logOut"
-              >
-                Log Out
-              </Link>
+
+              {displayLogOut()}
+              
             </NavItem>
           </Nav>
         </Collapse>

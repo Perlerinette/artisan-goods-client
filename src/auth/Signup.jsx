@@ -41,6 +41,7 @@ const Signup = (props) => {
               history.push('/MyShop');
             })
             .catch(err=> console.log(err));
+
     }
 
     
