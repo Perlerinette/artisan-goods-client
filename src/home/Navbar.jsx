@@ -94,7 +94,7 @@ const Sitebar = (props) => {
                 My Shop
               </Link>
 
-              {displayLogOut()}
+              {/* {displayLogOut()} */}
               
             </NavItem>
           </Nav>
