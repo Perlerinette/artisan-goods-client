@@ -39,36 +39,7 @@ const Sitebar = (props) => {
     }
   }, [showLogOut]);
 
-  function hideLogOut(){
-    setShowLogOut(false);
-    refreshPage();
-  }
 
-  function refreshPage(){
-    window.location.reload(false);
-  }
-
-  function displayLogOut(){
-    console.log(showLogOut);
-
-    return (
-
-    showLogOut ? 
-      <Link
-      onMouseOver={changeLink} onMouseLeave={resetLink} onClick={hideLogOut}
-      style={{ color: "black" }}
-      className="text-decoration-none pl-5"
-      to="/logOut"
-      >
-      Log Out
-      </Link>
-
-      :
-      null
-
-    )
-
-  }
 
   return (
     
@@ -92,10 +63,7 @@ const Sitebar = (props) => {
                 to="/myShop"
               >
                 My Shop
-              </Link>
-
-              {/* {displayLogOut()} */}
-              
+              </Link>              
             </NavItem>
           </Nav>
         </Collapse>
