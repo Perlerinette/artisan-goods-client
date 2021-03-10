@@ -87,6 +87,7 @@ const ProductIndex = (props) => {
                 {updateActive ? <ProductEdit productToUpdate={productToUpdate} updateOff={updateOff} token={props.token} getListOfProducts={getListOfProducts}/> : <></>}
                 </Col>
             </Row>
+            <br/>
         </Container>
         </>
      );

@@ -3,6 +3,7 @@ import HomeGalleryChild from './HomeGalleryChild';
 import {CardDeck, UncontrolledCarousel, Col, Row, Input, InputGroup, InputGroupAddon, InputGroupText,} from 'reactstrap';
 import { Search } from 'react-bootstrap-icons';
 import SilkFlowers from "./assets/silkFlowers.jpeg";
+import oil from "./assets/oil.jpg";
 import WallArt from "./assets/wallArt.jpg";
 import TableSetting from "./assets/tableSetting.jpeg";
 import Candle from "./assets/candle.jpeg";
@@ -31,7 +32,7 @@ const HomeGalleryParent = (props) => {
             key: '3'
         },
     {
-        src: "https://images.unsplash.com/photo-1612817288484-6f916006741a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
+        src: oil,
         altText: 'Mender Slide',
         key: '1',
         className: 'items'
